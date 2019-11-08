@@ -1,0 +1,27 @@
+h1.fancy-header {
+    color: purple;
+    text-decoration: underline;
+}
+
+.star {
+    background-color: #656555;
+    color #DAA520;
+
+
+}
+
+ul li {
+
+    text-decoration: underline;
+}
+
+table>.star{
+    mso-ascii-font-family: cursive;
+
+/* #FF0000 = red*/
+/* #800000 = pink*/
+/*# FFFF00=yellow*/
+/*  00FF00 =green*/
+body{
+    background-color: mediumblue;
+}   text-decoration: underline;

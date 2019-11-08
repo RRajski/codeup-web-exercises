@@ -1,0 +1,42 @@
+            #ron {
+                background-color: blue;
+                text-decoration: yellow wavy underline;
+                color:white;
+                font-size: 50px;
+            }
+            #matthew {
+                background-color: gray;
+                color: white;
+
+            }
+
+            #faith {
+
+            }
+
+            .star {
+                background-color: lime;
+                text-decoration: underline;
+            }
+            tr{
+                background: aquamarine;
+                text-decoration: underline;
+                text-shadow: crimson 2px;
+
+            }
+            #specificity {
+                font-family: fantasy;
+                color: crimson;
+            }
+
+            h1{ text-shadow: text-shadow:crimson 2px 2px 2px;
+
+            }
+
+            ol:hover {
+                color:blue;
+                font-family: "Great Vibes", cursive;
+                text-decoration: underline;
+            }
+
+        </style>
