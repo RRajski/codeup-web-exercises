@@ -71,8 +71,6 @@ a {
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
     align-items: center;
 
 
@@ -81,8 +79,7 @@ a {
 }
 
 .card {
-    align-items: center;
-    flex-basis: 90%
+    flex-basis: 100%
 ;
     /* This is a flex item */
 }
