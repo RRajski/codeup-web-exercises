@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+
+}
+
+nav{
+    display: flex;
+    position: absolute;
+    flex-basis: 100%;
+    flex-direction: row;
+    background: lightgray;
+    text-decoration-color: black;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-basis: 30%;
+
+
+
+
+}
+nav a {
+    text-decoration: black;
+    color: black;
+    font-family: Verdana;
+
+}nav ul li:nth child(4){
+
+}
+nav a:hover {
+    color: blue;
+    padding: 1em;
+
+}
