@@ -3,63 +3,82 @@
 }
 body {
     margin: 0;
-    text-align: center;
+
 }
 
 
 
 main {
-    border: 3px solid black;
-    display: inline-grid;
+    border: 6px solid black;
+    display: grid;
     height: 500px;
     width: 500px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grip-gap: 8px;
+    background-color: black;
 
 }
 
 main div{
     font-size: 2em;
     color: white;
-    background: grey;
+    background-color: grey;
     border: 3px solid black;
 
 }
 .div1 {
-    grid-area: 1 / 3 / 3 / 3;
-    background-color: darkblue;
+    grid-area: 1 / 1 / span 2 / span 2;
+    background-color: #30447B;
+    /*darkBlue */
 }
 .div2 { grid-area: 1 / 3 / 4 / 9;
     background-color: darkred;
+    /*#cb342e;  */
 }
 .div3 {
     grid-area: 6 / 1 / 3 / 3;
     background-color: gold;
+    /* #f5cc447
+       grid-row-start: 3;
+       grid-row-end: 6
+       grid-column-start:1;
+       grid-column-end:3;
+       */
 }
 .div4 {
     grid-area: 8 / 1 / 6 / 3;
     background-color: white;
+    /* #FFFFFF
+       grid-row: 4/8;
+       */
     }
 .div5 {
     grid-area: 6/ 5 / 4 / 9;
     background-color: white;
-
+    /* #FFF   */
 }
 .div6 {
     grid-area: 4 / 5 / 8 / 3;
     background-color: white;
-}
+} /*    */
 .div7 {
     grid-area: 8 / 9 / 6 / 5;
     background-color: gold;
+    /* 5cc47   */
 }
 .div8 {
     grid-area: 8 / 1 / 9 / 3;
     background-color: darkred;
+    /*    */
 }
 .div9 {
     grid-area: 8 / 3 / 9 / 9;
     background: darkblue;
+    /* 30447B  */
+
+}
+
 
 
     /*

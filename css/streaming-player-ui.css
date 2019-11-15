@@ -12,14 +12,12 @@ body {
 
 .wrapper {
     /* TODO: make the wrapper a grid container */
+    display: grid;
     /* TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
+    grid-template-columns:auto repeat(3, 400px) auto;
     /* TODO: add a gap of 1em around all grid items */
-    /* no row properties are needed */
+    grid-gap: 1em;/* no row properties are needed */
     /* TODO: the height of the wrapper should be 100 viewport height units */
-    wrap;
-    display: inline-grid;
-    grid-template-columns:400px auto;
-    grid-gap: 1em;
     height: 100vh;
 
 }
@@ -32,23 +30,31 @@ ul {
 
 header {
     background: purple;
+    grid-area: ;
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns */
-    grid
+    grid-area: 1/2/2/5;
 }
 
 nav {
     /* TODO: define the grid area of nav such that it takes up the second column of the second row  */
+    grid-area: 2/2/3/3;
 }
+
 
 main {
     /* TODO: define the grid area of main such that it takes up the columns 3 and 4 of the second row  */
     /* TODO: make main a grid container as well */
     /* TODO: define main to contain three columns that together take up equally the full width of main and have a 1em gap between grid items */
     overflow: auto;
+    grid-area: 2/3/3/5;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
 }
 
 header ul {
     /* TODO: use flex box to horizontally line up all list items */
+    display: flex;
 }
 
 header a {
@@ -57,8 +63,9 @@ header a {
 
 header ul li:nth-of-type(2) {
     /* TODO: uncomment the next line and add a value which causes Flexbox to automatically fill in extra space on it's left side */
-    /*margin-left: ;*/
+    margin-left: auto;
     border-right: 1px solid white;
+
 }
 
 header a:hover {
@@ -68,6 +75,7 @@ header a:hover {
 
 .header-background {
     background: purple;
+    grid-area: 1/1/2/6;
     /* TODO: define the grid area of this element to take up the entire first row of the .container grid  */
 }
 
@@ -113,7 +121,10 @@ nav a:hover {
     border-radius: 10px;
     position: relative;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
+    transition: .2s;
+    /*transition-delay: .2s;*/
 }
+
 
 .card:hover {
     border-color: #111;
