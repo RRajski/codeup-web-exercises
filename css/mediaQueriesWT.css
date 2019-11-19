@@ -1,0 +1,43 @@
+/*walthrough media query cell phone*/
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    margin 0;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 1em;
+    font-family: sans-serif;
+    ;
+}
+.alert-info{
+    background-color: #ccffff;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    border: .1em solid lightgray;
+}
+.alert-info a{
+    text-decoration: none;
+    color: black;
+}
+h1{/*Company*/
+    font-size: 3em;
+    margin: .2em;
+}.nav-links{
+    list-style: none;
+ }
+ .nav-links li{
+     background-color: #c2c2c2;
+     margin: 1em 0;
+
+ }
+ nav{
+     width: 100%;
+     text-align: center;
+     padding: 1em 0;
+ }
