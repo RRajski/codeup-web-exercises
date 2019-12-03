@@ -38,7 +38,7 @@ console.log(answer);
 // var Hercules=3
 // var total = (littleMermaid + brotherBear + Hercules);
 //     console.log(total);
-//     alert(total)
+//     alert(total);
 
 
 
@@ -49,16 +49,19 @@ console.log(answer);
 // 'Google and 4 hours for Amazon.
 
 
-// var googleRate = number(prompt("What is your google rate?));
-// var amazonRate = number(prompt("What is your amazon rate?));
-// var facebookRate = number(prompt("What is your facebook Rate?));
-//
-// var googleHours =number(prompt( "how many hours did you work at google?");
-// var amazonHours =number(prompt( "how many hours did you work at amazon?");
-// var facebookHours =number(prompt( "how many hours did you work at Facebook?");
-//
-// var totalPay = (googleHours * googleRate) + (amazonHours * amazonRate) +
-//
+var googleRate = number(prompt("What is your google rate?));
+var amazonRate = number(prompt("What is your amazon rate?));
+var facebookRate = number(prompt("What is your facebook Rate?));
+
+var googleHours =number(prompt( "how many hours did you work at google?");
+var amazonHours =number(prompt( "how many hours did you work at amazon?");
+var facebookHours =number(prompt( "how many hours did you work at Facebook?");
+
+var totalPay = (googleHours * googleRate) + (amazonHours * amazonRate) + (facebookRate * facebookHours);
+
+var alertMessage = "Your total pay is:$" + totalPay;
+alert(alertMessage);
+
 //
 //
 // var google= 400
@@ -70,7 +73,7 @@ console.log(answer);
 // console.log (total1);
 // alert(total1)
 //
-// // A student can be enrolled in a class only if the class is not full and the class schedule
+// // 3.3 A student can be enrolled in a class only if the class is not full and the class schedule
 // // does not conflict with her current schedule.
 //
 // var classIsNotFull = confirm("Class is not full");
@@ -97,14 +100,14 @@ console.log(answer);
 
 
 
-
-var isSpaceAvail = (x>1 && x<25);
-var scheduleConflict = false;
-var enrollNow = (isSpaceAvail + scheduleConflict)
-
-if (isSpaceAvail && !scheduleConflict){
-    return true;
-}
+//
+// var isSpaceAvail = (x>1 && x<25);
+// var scheduleConflict = false;
+// var enrollNow = (isSpaceAvail + scheduleConflict)
+//
+// if (isSpaceAvail && !scheduleConflict){
+//     return true;
+// }
 
 
 
