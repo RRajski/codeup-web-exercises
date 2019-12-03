@@ -173,7 +173,7 @@ console.log("Leave $ "+ amountToTip +"as a tip");
 //  * price.
 //  *
 //  * Example:
-//  * > var originalPrice = 100;
+//  * > var originalPrice = 100
 //  * > var dicountPercent = .2; // 20%
 //  * > applyDiscount(originalPrice, dicountPercent) // 80
 //  *
