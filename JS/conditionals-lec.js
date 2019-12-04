@@ -39,9 +39,9 @@
 //     //send a 20% off coupon
 // // })
 // // // //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
-    if(isRaining === true){
-    alert("Its Raining")
-    }
+//     if(isRaining === true){
+//     alert("Its Raining")
+//     }
 // // var isRainy =false;
 // // if(rainy){
 // // alert("its raining")
@@ -246,6 +246,21 @@
 // // } else {
 // //     alert(pizzaPreference + " isn't my favorite, but let's order some!");
 // // }
+
+switch (pizzaPreferenc) {
+    case"pineapple and hot sauce";
+    alert(what a coincidence, That's my favorite');
+        break;
+     case "cheese";
+
+
+
+
+
+
+     ]
+
+}
 //
 //
 //
@@ -328,10 +343,20 @@
 // }
 // console.log(message);
 
-
+//
 // var success = true;
 // var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
 // console.log(message)
+//
+// if(isAdmin){
+//     showAdminNavbar();
+//     else
+//     {
+//         showRegularNavbar();
+//     }
+// }
+//
+// (isAdmin ? showAdminNavbar() : showRegularNavbar();
 
 
 //TODO: Refactor the following conditional as a ternary
@@ -346,6 +371,15 @@
 // }
 
 //WRITE YOUR TERNARY STATEMENT HERE!
+
+var weather = "sunny";
+ var weathermessage1 = "rainy";
+ var weathermessage2 = "Have a nice day!"
+
+    weathermessage =(weather === "rainy") ? "It's raining" : "Have a nice day";
+
+ console.log((weathermessage));
+
 
 
 
@@ -369,8 +403,51 @@
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
+var weather = "rainy"
+switch(weather) {
+    case "rainy":
+    alert("It's Rainy!");
+        break;
+    case "sunny":
+    alert("It's sunny!");
+        break;
+        case "snow":
+            alert("its snowing ");
+            break;
+            default:
+alert(have a nice day!");
+break;
+}
+
+
+console.log(checkWeather(weather:"sunny"));
+
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
+
+function checkTrafficLight(trafficLight{
+    var colorMessage;
+
+    switch(trafficLight{
+        case "green"
+            colorMessage = "keep going!";
+        break;
+     switch (trafficLight{
+         case "yellow"
+             colorMessage = slow down!";
+         break;
+         case "red"
+             colorMessage =  "stop";
+            break;
+         default:
+             colorMessage = "proceed with caution";
+             break
+     }
+     return colorMessage;
+
+
+}
+console.log(checkTrafficLight("green"));
 
 
 
@@ -378,11 +455,11 @@
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
 
 
-// 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
+1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
 
 
-// 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
+2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
 
 
-// 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
+3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 

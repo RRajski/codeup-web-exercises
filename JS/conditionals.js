@@ -18,12 +18,19 @@
  */
 
 var confirmed = confirm("Would you like to enter a number");
-if(confirmed === true{
-    var num = (prompt("Please enter your number");
+if(confirmed === true){
+    var num = (prompt("Please enter your number")
 }
 else if{
     function isOdd(num) { return num % 2;}
     alert("your number is odd");
+}
+else if{
+    function isEven(num) {
+    return num === 0 || !!(n && !(n%2));
+    
+
+}
 }
 else if{
     * - what the number plus 100 is
