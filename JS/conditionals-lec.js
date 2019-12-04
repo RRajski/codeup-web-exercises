@@ -17,27 +17,31 @@
 // //
 // // // ================ IF STATEMENT EXAMPLES ================
 // // // //TODO Together: Show a specific navbar if user is admin
-// // // if (isAdmin){
-// // //     //show admin NavBar
-// // //     //showAdminNavbar() <-- function
-// // var isAdmin = true;
-// // if (isAdmin){
-// //     show admin Navbar
-// //     alert("user is an admin")
-// // }
+// if (isAdmin){
+//     //show admin NavBar
+// //     //showAdminNavbar() <-- function
+// var isAdmin = true;
+// if (isAdmin){
+//     // show admin Navbar
+// }
+// // if example
+// if (condition) {
+//     // code here gets executed if condition evaluates to true
+// }
+
 // // else{
 // //     alert("user is a regular user");
 // // }
 // // // }
 // // //
 // // // //TODO Together: Send a 20% off coupon if its users birthday
-// // // if (isBirthday{
-// // //     //send a 20% off coupon
-// // // })
+// if (isBirthday{
+//     //send a 20% off coupon
+// // })
 // // // //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
-// // //     if(isRaininy === true){
-// // //         alert("Its Raining")
-// // //     }
+    if(isRaining === true){
+    alert("Its Raining")
+    }
 // // var isRainy =false;
 // // if(rainy){
 // // alert("its raining")
@@ -265,32 +269,32 @@
 
 
 
-
-// ================ NESTED STATEMENTS ===============
-//TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
-var userage =15;
-var hasPermit = true;
-
-if (userage < 15){
-    alert("You are not old enough");
-}
-else{
-    if userage === 15{
-        alert("you can have a permit")
-    }
-}
-else if (userage >= 16 && hasPermit{
-        alert("you can have a license");
-}
-else if (userage >= 16 && !hasPermit{
-    alert("you can not  have a license");
-}else{
-    alert("please see front desk");
-}
-
-)
-
 //
+// // ================ NESTED STATEMENTS ===============
+// //TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
+// var userage =15;
+// var hasPermit = true;
+//
+// if (userage < 15){
+//     alert("You are not old enough");
+// }
+// else{
+//     if userage === 15{
+//         alert("you can have a permit")
+//     }
+// }
+// else if (userage >= 16 && hasPermit{
+//         alert("you can have a license");
+// }
+// else if (userage >= 16 && !hasPermit{
+//     alert("you can not  have a license");
+// }else{
+//     alert("please see front desk");
+// }
+//
+// )
+//
+// //
 // function checkStopLight(stopLight);
 // if(stopLight === "red"){
 //     return"Put the Pedal to the Metal";
