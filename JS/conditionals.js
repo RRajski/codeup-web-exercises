@@ -19,35 +19,53 @@
 
 var confirmed = confirm("Would you like to enter a number");
 if(confirmed === true){
-    var num = (prompt("Please enter your number")
+    var num = (prompt("Please enter your number");
 }
 else if{
-    function isOdd(num) { return num % 2;}
+    function isOdd(num){
+    return (num % 2);
     alert("your number is odd");
+}
 }
 else if{
     function isEven(num) {
-    return num === 0 || !!(n && !(n%2));
-    
+    return (num === 0 || !!(n && !(n%2));
+    alert("your number is odd");
+    }
+}
+else if{
+    var numPlus100;
+    var plusHundredtotal;
+    function numPlus100(num){
+        return(num + 100);
+        alert("your number plus 100 =" + plusHundredtotal)
+}
+}
+else if{
+   var numIsNegative;
+   function numIsNegative(num){
+       return (num < 0);
+       alert("your numer is negative");
+   }
+else if{
+    var numIsPositve;
+function numIsPositive(num){
+    return (num >0);
+    alert("your numer is positive");
+}
+else {
+    var notANumber;
+function notANumber(input){
+    alert("This is not a number. Please enter a number.")
+}
 
-}
-}
-else if{
-    * - what the number plus 100 is
-}
-else if{
-    * - if the number is negative or positive
-}
-default{
-* if what the user enters is not a number, use an alert to tell them that, and
+} if what the user enters is not a number, use an alert to tell them that, and
     * do *not* display any of the above information.
     *
 
 }
 
-if(isRaining === true){
-    alert("Its Raining")
-}
+
 
 
 //     // (alert(alertMessage)"The number is even or odd");
@@ -72,7 +90,17 @@ if(isRaining === true){
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
+// function analyzeColor(input) {
+//     if (input === blue) {
+//         return ("blue is the color of the sky");
+//     }
+//     else if (input === red) {
+//         return ("Stawberries are red");
+//     }
+//     if else (input === cyan){
+//         return ("I don't know anything about cyan");
+//     }
+// }
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -85,11 +113,47 @@ if(isRaining === true){
 //  * Pass the `randomColor` variable to your function and console.log the results.
 //  * You should see a different message every time you refresh the page
 //  */
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    function randomColor() {
+        console.log(randomColor);
+    }
 //
 // /**
 //  * TODO:
 //  * Refactor your above function to use a switch-case statement
 //  */
+
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colorMessage;
+function randomColor() {
+        switch (colors) {
+        case "red":
+            colorMessage = "Ruby Tuesday!";
+            break;
+            case "orange":
+                colorMessage = "Go Horns";
+                break;
+            case "yellow":
+                colorMessage = "Bumblebee";
+                break;
+                case "green";
+                colorMessage = "Go Gators"
+            case "blue":
+                colorMessage = "Manic Monday";
+                break;
+            case "indigo":
+                colorMessage = "the snobby word for purple";
+                break;
+            case "violet":
+                colorMessage = "the snobbier word for purple";
+                break;
+            default:
+                colorMessage = "not in my rainbow";
+                break;
+        }
+}
 //
 // /**
 //  * TODO:
@@ -97,6 +161,15 @@ if(isRaining === true){
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
 //  */
+
+var favoriteColorRainbow = prompt("What is your favorite color of the rainbow?");
+    function analyzeColor(input) {
+        return randomColor(input);
+        alert( input +  "is another color you might like!");
+    }
+
+
+
 //
 // /* ########################################################################## */
 //
@@ -119,6 +192,12 @@ if(isRaining === true){
 //  * Test your function by passing it various values and checking for the expected
 //  * return value.
 //  */
+var luckyNumberZero;
+var luckyNumberOne;
+var luckyNumberTwo;
+var luckyNumberThree:
+var luckyNumberFour;
+var luckNumberFive
 //
 // /**
 //  * TODO:
