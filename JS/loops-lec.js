@@ -175,17 +175,36 @@ var userConfirm;
 //  For numbers divisible by 3, log "Fizz"
 //  For numbers divisible by 5, log "Buzz"
 //  If divisible by 3 and 5, log "FizzBuzz"
+// //  All other cases, just log the number.
+// for (var i=1; i <=100; i++) {
+//     if (i % 15 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 5 === 0){
+//         console.log("Buzz");
+//     } else if (i % 3 === 0){
+//         console.log("Fizz");
+//     } else{
+//         console.log(i);
+//     }
+// }
+
+// TODO: Using a for loop, complete the FizzBuzz challenge:
+//  Your program should count up to 100.
+//  For numbers divisible by 4, log "Fizz"
+//  For numbers divisible by 7, log "Buzz"
+//  If divisible by 4 and 7, log "FizzBuzz"
 //  All other cases, just log the number.
-for (var i=1; i <=100; i++) {
-    if (i % 15 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 5 === 0){
-        console.log("Buzz");
-    } else if (i % 3 === 0){
+for (var i = 1; i <= 100; i++) {
+    if(i % 4 && i & 7 === 0) {
+        console.log("Fizzbuzz");
+    }else if (i % 7 === 0){
         console.log("Fizz");
-    } else{
-        console.log(i);
+    }else if (i % 4 === 0){
+        console.log("Buzz");
+    }else{
+     console.log(i);
     }
+
 }
 
 
