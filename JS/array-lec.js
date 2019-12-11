@@ -27,8 +27,8 @@
 //     }
 
 
- var fruit =["strawberry", "apple", "orange", "banana"];
-console.log(fruit);
+//  var fruit =["strawberry", "apple", "orange", "banana"];
+// console.log(fruit);
 // fruit[fruit.length] ="pear";
 // fruit.push("pear");
 // console.log(fruit.push("pineapple","grape", "mango"));
@@ -100,13 +100,143 @@ console.log(fruit);
 // }
 // words.reverse();
 // words. sort //Alphabetical order
-, ,
-var fruit =["apple", "orange", "banana," "pear", "pineapple"; "grape", "apple", "mango", "stawberry" ];
+// , ,
+// var fruit =["apple", "orange", "banana," "pear", "pineapple"; "grape", "apple", "mango", "stawberry" ];
 
-var fruitThru3 = fruit.slice(0,3);
-var fruit6Thr8 = fruit.slice(5,8);
-console.log(fruit6Thru8);
-console.log(fruit);
+// var fruitThru3 = fruit.slice(0,3);
+// // var fruit6Thr8 = fruit.slice(5,8);
+// // console.log(fruit6Thru8);
+// // console.log(fruit);
+
+// var car ={
+//   make:"Toyota",
+//   model: "Sienna",
+//   year:  "2009",
+//   isTitled: true,
+//   options:["4 wheel drive", "heated seats","leather interior"],
+//   goGoGo: function(key){
+//    if (key == "correct"){
+//     console.log("vroom");
+//    }else{
+//     console.log("...");
+//    }
+// }
+// }
+// console.log("Car was made in "+ car.year);
+// console.log("Car has these options:");
+// car.options.forEach(function(option){
+//  console.log(option)});
+// car.goGoGo("key");
+//
+// var bicycle ={
+//  make: "Cannondale",
+//  Model: "Super Six",
+//  year: "2015",
+//  isRegistered: true,
+//  options:["dura ace components", "14 speed", "carbon"],
+//  sundayRide: function (wakeUpOnTime) {
+//    if (wakeUpOnTime){
+//     console.log("Bicycle, bicycle I want to ride my bicycle");
+//    }else{
+//     console.log("you overslept!");
+//    }
+//
+//  }
+//  console.log("bike was made in "+ bicycle.year);
+
+//  var teacher={
+//   name: "Daniel",
+//   languages: ["English","HTML", "Javascript"],
+//   teach: function (language) {
+//    if (this.languages.includes(language))
+//     console.log("Here is your knowledge");
+//    else
+//     conole.log("blah, blah, blah");
+//
+//   }
+//
+//  }
+// teacher.teach("Javascript")
+//
+// var truck = new Object(());
+// // var cats  = new Array();
+//
+// truck.make = "Tesla";
+// truck.model = "CyberTruck";
+// truck.year = 2022;
+// truck.gogogo =function () {
+//  console.log("VROOM");
+//
+// }
+// // cats{3};
+// // truck["model"]
+var cars = [
+    car,
+ {
+  make: "Dodge",
+  model: "Challenger",
+  year: "2019",
+ },
+ {
+  make: "Ford",
+  model: "GT 500 Mustang",
+  year: "1969",
+ },
+ {
+  make: "Cadillac",
+  model: "Escalade",
+  year: "2015",
+  report: function(){
+   console.log(this.year + "" + this.make + ""this.model);
+  }
+
+
+
+
+ }
+]
+}
+cars.forEach(function(car)){
+ car.report();
+ // array of objects similarily structured within an array
+}
+
+var dogs = [
+    dog,
+ {
+   name: Malu,
+   breed: Staffordshire Terrier,
+   year obtained: 2019,
+
+ },
+{
+   name: Pokie,
+       breed: German Shepard Mix,
+         year obtained: 2000,
+         },
+{
+  name: Chi,
+     breed: Collie,
+         year obtained: 1999,
+
+    },
+
+
+
+]
+
+
+
+
+// var make = "Toyota";
+// var model = "Sienna";
+// var year = "2009";
+// var isTitled = true;
+
+
+
+
+
 
 
 
