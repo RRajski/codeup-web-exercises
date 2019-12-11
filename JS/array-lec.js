@@ -128,8 +128,8 @@
 //  console.log(option)});
 // car.goGoGo("key");
 //
-// var bicycle ={
-//  make: "Cannondale",
+var bicycle ={
+ make: "Cannondale",
 //  Model: "Super Six",
 //  year: "2015",
 //  isRegistered: true,

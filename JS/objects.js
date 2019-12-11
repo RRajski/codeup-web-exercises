@@ -14,9 +14,13 @@
 
 
 
+
     var person = {
-        firstName:"Ron",
-        lastName:"Rajski",
+        firstName: "Ron",
+        lastName: "Rajski",
+        sayHello: function () {
+            return ("Hello from " + this.firstName + " " + this.lastName);
+        }
     }
 
     console.log(person.firstName);
@@ -32,11 +36,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    function sayHello(person){
-        return ("Hello from " + person.firstName + " " + person.lastName);
+
+    person.sayHello = function sayHello(){
+    return ("Hello from " + person.firstName + " " + person.lastName);
     }
 
-    console.log(sayHello(person));
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -52,32 +57,25 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     shopper,
-    //     {
-    //         name: 'Cameron',
-    //         amount: 180,
-    //         for (var i >= 200; (i * .12)+ i; i++) {
-    //         console.log(amount + i);
-    // }
-    //         if (amount > 200){
-    //             return (amount) - parseFloat(amount * .12)
-    //         }else{
-    //             return("You do not get the discount");
-    //         }
-    //
-    //     },
-    //     {
-    //         name: 'Ryan',
-    //         amount: 250},
-    //     },
-    //     {
-    //         name: 'George',
-    //         amount: 320
-    //     }'
-    //                 ];
-    // if shopper.amount(i > 200){
-    //     return
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180, discount: 0}
+        {name: 'Ryan', amount: 250, discount: .12}}
+        {name: 'George',amount: 320, discount: .12}
+   ];
+
+    shoppers.forEach(function(shopper)){
+        var discount = 0;
+        if shopper.amount > 200)
+            discount = shopper.amount * .12;
+        var total = shopper.amount - discount;
+        console.log(shopper.name + "is bill was $" + shopper.amount +".They received a discount of + discount " +
+            "+ and their total was $ +total+"."");
+
+
+
+        }
+        console.log("Hello" + shopper.name + " your total ")
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -92,100 +90,102 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books =[
-                title: 'War of the Worlds',
-                author{
-                    firstName: 'Jules',
-                    lastName: 'Verne',
-        },
-        {
-                title: 'Antlers in the Tree Tops',
-                author{
-                    firstName: 'Hu Goosed',
-                    lastName: 'DaMoose',
-                    }
-                    },
-        {
-                title: 'Rusty Bedsrings',
-                author{
-                    firstName: 'IP',
-                    lastName: 'Knightly'
-                    }
-                    },
-        {
-                title: 'Putin on the Putin',
-                    author{
-                    firstName: 'Donald',
-                    lastName: 'Trump',
-                    }
-                    },
-    {
-                title: 'A Tale of Two Cities',
-                author{
-                    firstName:'Charles',
-                    lastName:'Dickens',
-    },
-    ]
-
-
-
-console.log(books[0].title;
-console.log(books[0].author.firstName);
-console.log(books[0].author.lastName);
-
-
-
-
-    // var bicycle ={
-//  make: "Cannondale",
-//  Model: "Super Six",
-//  year: "2015",
-//  isRegistered: true,
-//  options:["dura ace components", "14 speed", "carbon"],
-//  sundayRide: function (wakeUpOnTime) {
-//    if (wakeUpOnTime){
-//     console.log("Bicycle, bicycle I want to ride my bicycle");
-//    }else{
-//     console.log("you overslept!");
-//    }
+//     var books =[
+//                 title: 'War of the Worlds',
+//                 author{
+//                     firstName: 'Jules',
+//                     lastName: 'Verne',
+//                     report: function(){
+//                     console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
+//         },
+// //         {
+// //                 title: 'Antlers in the Tree Tops',
+// //                 author{
+// //                     firstName: 'Hu Goosed',
+// //                     lastName: 'DaMoose',
+// //                     }
+// //                     },
+// //         {
+// //                 title: 'Rusty Bedsrings',
+// //                 author{
+// //                     firstName: 'IP',
+// //                     lastName: 'Knightly'
+// //                     }
+// //                     },
+// //         {
+// //                 title: 'Putin on the Putin',
+// //                     author{
+// //                     firstName: 'Donald',
+// //                     lastName: 'Trump',
+// //                     }
+// //                     },
+// //     {
+// //                 title: 'A Tale of Two Cities',
+// //                 author{
+// //                     firstName:'Charles',
+// //                     lastName:'Dickens',
+// //     },
+// //     ]
+// //
+// //
+// //
+// // console.log(books[0].title;
+// // console.log(books[0].author.firstName);
+// // console.log(books[0].author.lastName);
+// //
 //
-//  }
-//  console.log("bike was made in "+ bicycle.year);
-
-    /**
-     * TODO:
-     * Loop through the books array and output the following information about
-     * each book:
-     * - the book number (use the index of the book in the array)
-     * - the book title
-     * - author's full name (first name + last name)
-     *
-     * Example Console Output:
-     *
-     *      Book # 1
-     *      Title: The Salmon of Doubt
-     *      Author: Douglas Adams
-     *      ---
-     *      Book # 2
-     *      Title: Walkaway
-     *      Author: Cory Doctorow
-     *      ---
-     *      Book # 3
-     *      Title: A Brief History of Time
-     *      Author: Stephen Hawking
-     *      ---
-     *      ...
-     */
-
-    /**
-     * Bonus:
-     * - Create a function named `createBook` that accepts a title and author
-     *   name and returns a book object with the properties described
-     *   previously. Refactor your code that creates the books array to instead
-     *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
-
+//
+//
+//     // var bicycle ={
+// //  make: "Cannondale",
+// //  Model: "Super Six",
+// //  year: "2015",
+// //  isRegistered: true,
+// //  options:["dura ace components", "14 speed", "carbon"],
+// //  sundayRide: function (wakeUpOnTime) {
+// //    if (wakeUpOnTime){
+// //     console.log("Bicycle, bicycle I want to ride my bicycle");
+// //    }else{
+// //     console.log("you overslept!");
+// //    }
+// //
+// //  }
+// //  console.log("bike was made in "+ bicycle.year);
+//
+//     /**
+//      * TODO:
+//      * Loop through the books array and output the following information about
+//      * each book:
+//      * - the book number (use the index of the book in the array)
+//      * - the book title
+//      * - author's full name (first name + last name)
+//      *
+//      * Example Console Output:
+//      *
+//      *      Book # 1
+//      *      Title: The Salmon of Doubt
+//      *      Author: Douglas Adams
+//      *      ---
+//      *      Book # 2
+//      *      Title: Walkaway
+//      *      Author: Cory Doctorow
+//      *      ---
+//      *      Book # 3
+//      *      Title: A Brief History of Time
+//      *      Author: Stephen Hawking
+//      *      ---
+//      *      ...
+//      */
+//
+//     /**
+//      * Bonus:
+//      * - Create a function named `createBook` that accepts a title and author
+//      *   name and returns a book object with the properties described
+//      *   previously. Refactor your code that creates the books array to instead
+//      *   use your function.
+//      * - Create a function named `showBookInfo` that accepts a book object and
+//      *   outputs the information described above. Refactor your loop to use your
+//      *   `showBookInfo` function.
+//      */
+//
 })();
