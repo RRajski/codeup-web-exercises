@@ -50,6 +50,12 @@
 
 // Define a function named isNumeric that takes in a value and returns true if the input is numeric or not. Numeric strings are numeric and should return true.
 
+function isNumeric(value){
+
+}
+if (value === !NaN){
+    return true;
+}
 
 
 
