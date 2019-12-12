@@ -129,8 +129,8 @@ books = [
         }
     },
 
-console.log(books[1].title)
-// * > console.log(books[0].author.firstName) // "Douglas"
+
+// uthor.firstName) // "Douglas"
 // * > console.log(books[0].author.lastName) // "Adams"
 
 
@@ -142,32 +142,12 @@ console.log(books[1].title)
 //             ;
 //         }}},
 ]
-// //
-// //
-// //
-// // console.log(books[0].title;
-// // console.log(books[0].author.firstName);
-// // console.log(books[0].author.lastName);
-// //
-//
-//
-//
-//     // var bicycle ={
-// //  make: "Cannondale",
-// //  Model: "Super Six",
-// //  year: "2015",
-// //  isRegistered: true,
-// //  options:["dura ace components", "14 speed", "carbon"],
-// //  sundayRide: function (wakeUpOnTime) {
-// //    if (wakeUpOnTime){
-// //     console.log("Bicycle, bicycle I want to ride my bicycle");
-// //    }else{
-// //     console.log("you overslept!");
-// //    }
-// //
-// //  }
-// //  console.log("bike was made in "+ bicycle.year);
-//
+console.log(books[0].title);
+console.log(books[0].author.firstName);
+console.log(books[0].author.lastName);
+
+
+
 //     /**
 //      * TODO:
 //      * Loop through the books array and output the following information about
@@ -192,12 +172,12 @@ console.log(books[1].title)
 //      *      ---
 //      *      ...
 //      */
-//
-// books.forEach(function ((book), i) {
-//     console.log("Book #"+(i+1));
-//     console("Title: "book.title);
+// //
+// books.forEach(function (book)), i){
+//     console.log("Book #"+(i+1))
+//     console("Title: "book.title)
 //     console.log("Author: "+ book.author.firstName + " " + book.author.lastName);
-
+//
 // })
 
 
