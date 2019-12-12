@@ -1,131 +1,135 @@
-(function() {
-    "use strict";
-
-    /**
-     * TODO:
-     * Create an object with firstName and lastName properties that are strings
-     * with your first and last name. Store this object in a variable named
-     * `person`.
-     *
-     * Example:
-     *  > console.log(person.firstName) // "Rick"
-     *  > console.log(person.lastName) // "Sanchez"
-     */
-
-
-
-
-    var person = {
-        firstName: "Ron",
-        lastName: "Rajski",
-        sayHello: function () {
-            return ("Hello from " + this.firstName + " " + this.lastName);
-        }
-    }
-
-    console.log(person.firstName);
-    console.log(person.lastName);
+// (function() {
+//     "use strict";
 //
+//     /**
+//      * TODO:
+//      * Create an object with firstName and lastName properties that are strings
+//      * with your first and last name. Store this object in a variable named
+//      * `person`.
+//      *
+//      * Example:
+//      *  > console.log(person.firstName) // "Rick"
+//      *  > console.log(person.lastName) // "Sanchez"
+//      */
+//
+//
+//
+//
+//     var person = {
+//         firstName: "Ron",
+//         lastName: "Rajski",
+//         sayHello: function () {
+//             return ("Hello from " + this.firstName + " " + this.lastName);
+//         }
+//     }
+//
+//     console.log(person.firstName);
+//     console.log(person.lastName);
+// //
+//
+//     /**
+//      * TODO:
+//      * Add a sayHello method to the person object that returns a greeting using
+//      * the firstName and lastName properties.
+//      * console.log the returned message to check your work
+//      *
+//      * Example
+//      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
+//      */
+//
+//     person.sayHello = function sayHello(){
+//     return ("Hello from " + person.firstName + " " + person.lastName);
+//     }
+//
+//     console.log(person.sayHello());
+//
+//     /** TODO:
+//      * HEB has an offer for the shoppers that buy products amounting to
+//      * more than $200. If a shopper spends more than $200, they get a 12%
+//      * discount. Write a JS program, using conditionals, that logs to the
+//      * browser, how much Ryan, Cameron and George need to pay. We know that
+//      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
+//      * display a line with the name of the person, the amount before the
+//      * discount, the discount, if any, and the amount after the discount.
+//      *
+//      * Uncomment the lines below to create an array of objects where each object
+//      * represents one shopper. Use a foreach loop to iterate through the array,
+//      * and console.log the relevant messages for each person
+//      */
+//
+//
+//     var shoppers = [
+//         {name: 'Cameron', amount: 180},
+//         {name: 'Ryan', amount: 250},
+//         {name: 'George',amount: 320}
+//    ];
+//
+//     shoppers.forEach(function (shopper) {
+//         var discount = 0;
+//         if (shopper.amount > 200) {
+//             discount = shopper.amount * .12;
+//             var total = shopper.amount - discount;
+//             console.log(shopper.name + "'s bill was $" + shopper.amount + ".They received a discount of $" + discount +
+//                 "and their total was $" + total + ".");
+//
+//         }
+//
+//     })
 
-    /**
-     * TODO:
-     * Add a sayHello method to the person object that returns a greeting using
-     * the firstName and lastName properties.
-     * console.log the returned message to check your work
-     *
-     * Example
-     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
-     */
+        /** TODO:
+         * Create an array of objects that represent books and store it in a
+         * variable named `books`. Each object should have a title and an author
+         * property. The author property should be an object with properties
+         * `firstName` and `lastName`. Be creative and add at least 5 books to the
+         * array
+         *
+         * Example:
+         * > console.log(books[0].title) // "The Salmon of Doubt"
+         * > console.log(books[0].author.firstName) // "Douglas"
+         * > console.log(books[0].author.lastName) // "Adams"
+         */
 
-    person.sayHello = function sayHello(){
-    return ("Hello from " + person.firstName + " " + person.lastName);
-    }
+    var books =[
+            {
+                title: 'War of the Worlds',
+                author{
+                    firstName: 'Jules',
+                    lastName: 'Verne'}
+                    report: function(){
+                    console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
+        }},
+        {
+                title: 'Antlers in the Tree Tops',
+                author{
+                    firstName: 'Hu Goosed',
+                    lastName: 'DaMoose'}
+                    report: function(){
+                        console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
+                }},
+        {
+                title: 'Rusty Bedsrings',
+                author{
+                    firstName: 'IP',
+                    lastName: 'Knightly'}
+                    report: function(){
+                    console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
+                }},
+        {
+                title: 'Putin on the Ritz',
+                    author{
+                    firstName: 'Vlad',
+                    lastName: 'Trump'
+                        console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
 
-    console.log(person.sayHello());
-
-    /** TODO:
-     * HEB has an offer for the shoppers that buy products amounting to
-     * more than $200. If a shopper spends more than $200, they get a 12%
-     * discount. Write a JS program, using conditionals, that logs to the
-     * browser, how much Ryan, Cameron and George need to pay. We know that
-     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
-     *
-     * Uncomment the lines below to create an array of objects where each object
-     * represents one shopper. Use a foreach loop to iterate through the array,
-     * and console.log the relevant messages for each person
-     */
-
-
-    var shoppers = [
-        {name: 'Cameron', amount: 180, discount: 0}
-        {name: 'Ryan', amount: 250, discount: .12}}
-        {name: 'George',amount: 320, discount: .12}
-   ];
-
-    shoppers.forEach(function(shopper)){
-        var discount = 0;
-        if shopper.amount > 200)
-            discount = shopper.amount * .12;
-        var total = shopper.amount - discount;
-        console.log(shopper.name + "is bill was $" + shopper.amount +".They received a discount of + discount " +
-            "+ and their total was $ +total+"."");
-
-
-
-        }
-        console.log("Hello" + shopper.name + " your total ")
-
-    /** TODO:
-     * Create an array of objects that represent books and store it in a
-     * variable named `books`. Each object should have a title and an author
-     * property. The author property should be an object with properties
-     * `firstName` and `lastName`. Be creative and add at least 5 books to the
-     * array
-     *
-     * Example:
-     * > console.log(books[0].title) // "The Salmon of Doubt"
-     * > console.log(books[0].author.firstName) // "Douglas"
-     * > console.log(books[0].author.lastName) // "Adams"
-     */
-
-//     var books =[
-//                 title: 'War of the Worlds',
-//                 author{
-//                     firstName: 'Jules',
-//                     lastName: 'Verne',
-//                     report: function(){
-//                     console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
-//         },
-// //         {
-// //                 title: 'Antlers in the Tree Tops',
-// //                 author{
-// //                     firstName: 'Hu Goosed',
-// //                     lastName: 'DaMoose',
-// //                     }
-// //                     },
-// //         {
-// //                 title: 'Rusty Bedsrings',
-// //                 author{
-// //                     firstName: 'IP',
-// //                     lastName: 'Knightly'
-// //                     }
-// //                     },
-// //         {
-// //                 title: 'Putin on the Putin',
-// //                     author{
-// //                     firstName: 'Donald',
-// //                     lastName: 'Trump',
-// //                     }
-// //                     },
-// //     {
-// //                 title: 'A Tale of Two Cities',
-// //                 author{
-// //                     firstName:'Charles',
-// //                     lastName:'Dickens',
-// //     },
-// //     ]
+                }},
+    {
+                title: 'A Tale of Two Cities',
+                    author{
+                    firstName:'Charles',
+                    lastName:'Dickens'
+                    console.log(this.title + " " + this.author.firstName + " "this.author.lastName);
+}},
+]
 // //
 // //
 // //
@@ -188,4 +192,4 @@
 //      *   `showBookInfo` function.
 //      */
 //
-})();
+    })
