@@ -53,7 +53,7 @@
 // watches.pop();
 // console.log(watches);
 
-// var sentence = "The quick brown fox jumps over the lazy dog";
+var sentence = "The quick brown fox jumps over the lazy dog";
 // console.log(sentence);
 // var words = sentence.split("");
 // for (var i = 0; i <words.length; i++){
@@ -128,8 +128,8 @@
 //  console.log(option)});
 // car.goGoGo("key");
 //
-var bicycle ={
- make: "Cannondale",
+// var bicycle ={
+//  make: "Cannondale",
 //  Model: "Super Six",
 //  year: "2015",
 //  isRegistered: true,
@@ -170,8 +170,7 @@ var bicycle ={
 // }
 // // cats{3};
 // // truck["model"]
-var cars = [
-    car,
+var car =[
  {
   make: "Dodge",
   model: "Challenger",
@@ -187,7 +186,10 @@ var cars = [
   model: "Escalade",
   year: "2015",
   report: function(){
-   console.log(this.year + "" + this.make + ""this.model);
+   console.log(this.year+ "" + this.make + "" + this.model+);
+   );
+
+
   }
 
 
@@ -195,35 +197,35 @@ var cars = [
 
  }
 ]
-}
-cars.forEach(function(car)){
- car.report();
- // array of objects similarily structured within an array
-}
 
-var dogs = [
-    dog,
- {
-   name: Malu,
-   breed: Staffordshire Terrier,
-   year obtained: 2019,
+// cars.forEach(function(car)){
+//  car.report();
+//  // array of objects similarily structured within an array
+// }
 
- },
-{
-   name: Pokie,
-       breed: German Shepard Mix,
-         year obtained: 2000,
-         },
-{
-  name: Chi,
-     breed: Collie,
-         year obtained: 1999,
-
-    },
-
-
-
-]
+// var dogs = [
+//     dog,
+//  {
+//    name: Malu,
+//    breed: Staffordshire Terrier,
+//    year obtained: 2019,
+//
+//  },
+// {
+//    name: Pokie,
+//        breed: German Shepard Mix,
+//          year obtained: 2000,
+//          },
+// {
+//   name: Chi,
+//      breed: Collie,
+//          year obtained: 1999,
+//
+//     },
+//
+//
+//
+// ]
 
 
 
