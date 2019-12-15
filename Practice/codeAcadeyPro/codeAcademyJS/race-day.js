@@ -16,22 +16,22 @@
 //     Late adults run at 11:00 am.
 //     Youth registrants run at 12:30 pm (regardless of registration).
 // But we didn’t plan for runners that are exactly 18! We’ll handle that by the end of the project.
-
+console.log("hello");
 let raceNumber = Math.floor(Math.random() * 1000);
-const registeredEarly = false;
-let early = false;
-let age = 49;
+var registeredEarly = false;
+var early = false;
+var age = 49;
 if(early && age> 18){
     raceNumber += 1000;
 }
 if (early && age > 18){
-    console.log("Race will begin at 9:30, your race number is: ${raceNumber}.");
+    console.log("Race will begin at 9:30, your race number is:" + raceNumber);
 }
 else if(!early && age > 18){
-    console.log("Race will begin at 11:00, your race number is: ${raceNumber}.");
+    console.log("Race will begin at 11:00, your race number is:" + raceNumber);
 }
 else if (age < 18){
-    console.log("Race will begin at 12:30, your race number is ${raceNumber}.");
+    console.log("Race will begin at 12:30, your race number is:" + raceNumber);
 }
 else{
     console.log("Please approach the registration desk.");
