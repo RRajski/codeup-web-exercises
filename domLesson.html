@@ -8,7 +8,7 @@
 <h1 id="header"Happy Holdidays></h1>
     <h3 id="smallerHeader">Wish List</h3>
     <ul>
-        <li class="odd">Great Carreer</li>
+        <li class="odd">Great Career</li>
         <li class="even">My two front teeth</li>
         <li class="odd">Oculus</li>
         <li class="even">Nintendo Switch</li>
@@ -25,6 +25,18 @@
         <li class="Vina">In the ghetto</li>
     </ol>
 
+<button id="btn1">Click Me!</button>
+<button id="btn2">Click Me!</button>
+<button id="btn3">Remove Event Listener</button>
+<button id="btn4">Click Me!</button>
+<style>
+
+
+
+
+</style>
+
+
 
 <script>
     console.log(document)
@@ -40,37 +52,53 @@
 
     var wishList = document.getElementById("wishList");
     var htmlString = "";
-    for (var i= 0; i<thingsIWant[i]).length;i++){
-        htmlString += "<li>" +thingsIWant + </li>";
+    for (var i= 0; i<thingsIWant[i].length;i++){
+        htmlString += ("<li>" +thingsIWant + </li>");
 
-}
-    }
+// }
+//     }
+//
+// var odds =document.getElementsByClassName("odd");
+//     for (var i=0;i<odds.length;i++){
+//         odds[i].style.color = "red"
+//     }
+// }
+//     }
+//
+//
+//
+//
+//
+//     console.log(document)
+//     var header =document.getElementById("header");
+//     console.log(header);
+//
+//     var  evens = document.getElementsByClassName("even");
+//     console.log("evens:"+evens);
+//     for (var i = 0;i<evens.length;i++){
+//         console.log(evens[1]);
+//     }
+//
+//     var lis = document.getElementsByTagName("li");
+//     console.log(lis);
+//     for (var i=0; i<lis.length;i++){
+//         console.log(lis[i]);
 
-var odds =document.getElementsByClassName("odd");
-    for (var i=0;i<odds.length;i++){
-        odds[i].style.color = "red"
-    }
-}
-    }
+
+        var clicks = 0
+        var buttonClick = function(){
+            click++;
+            console.log("button was clicked " + clicks + "items")
+        }
+
+        var button = document.getElementById("button");
+        button.addEventListener("click", buttonClick) {
+    set setTimeout(function)button.removeEventListener("click", 5000);
 
 
+        // // register the listener to handle clicks on btn1
+        // document.getElementById('btn1').addEventListener('click', listener, false);
 
-
-
-    console.log(document)
-    var header =document.getElementById("header");
-    console.log(header);
-
-    var  evens = document.getElementsByClassName("even");
-    console.log("evens:"+evens);
-    for (var i = 0;i<evens.length;i++){
-        console.log(evens[1]);
-    }
-
-    var lis = document.getElementsByTagName("li");
-    console.log(lis);
-    for (var i=0; i<lis.length;i++){
-        console.log(lis[i]);
 
 
 
