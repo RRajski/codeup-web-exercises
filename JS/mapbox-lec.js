@@ -14,6 +14,14 @@
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
 
+mapboxgl.accessToken = mapboxToken;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 11,
+    center: [-98.4916, 29.4252]
+    });
+
 
 /**********************************************
  * 					MARKERS
@@ -25,6 +33,16 @@
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4916, 29.4260]. This marker will mark the Alamo on our map.
 // TODO TOGETHER: Change the color of the marker
+
+//     var markerOptions = {
+//         color:"green",
+//         draggable: true
+// }
+// var marker = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-98.4861, 29.4260])
+//     // .setLngLat([-87.655334, 41.948437])
+//     // .setLngLat([-87.8028, 42.0189])
+//     .addTo(map);
 
 
 // TODO: Experiment with the color, and setting the LngLat
@@ -40,6 +58,11 @@
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
+//
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.489615, 29.426827])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map)
 
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
@@ -54,7 +77,14 @@
 
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
-
+// mapboxgl.accessToken = mapboxToken;
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v9',
+//     zoom: 11,
+//     center: [-98.4916, 29.4252]
+});
+geocode("600 Navaro St, San Antonio, TX  78205," .then(function(result)))
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
@@ -64,5 +94,11 @@
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
+reverseGeocode(coordinates){lng: -98.4861, lat: 29.4260}, mapboxToken).then(function (result) {
+    console.log(result);
+
+
+
+})
 
 
