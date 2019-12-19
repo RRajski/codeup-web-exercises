@@ -36,7 +36,10 @@ var map = new mapboxgl.Map({
 //     .addTo(map);
 
 var panderiaPopup = new mapboxgl.Popup()
-    .setHTML("La Panderia, a great place to get coffee and sweet treats")
+    .setHTML("<h2>La Panderia</h2>")
+//     "<ul>Restaraunt type:  " +
+// "" +
+// "</ul>"
     // .addTo(map);
 
 var panderiaMarker = new mapboxgl.Marker()
@@ -45,7 +48,8 @@ var panderiaMarker = new mapboxgl.Marker()
     .setPopup(panderiaPopup);
 
 var inNOutPopup = new mapboxgl.Popup()
-    .setHTML("<p>You almost missed flights for this!</p>");
+    .setHTML("<H2>In N Out Burger</H2>" +
+        "<p>Not quite Danny Slam burgers</p>");
 
 var inNOutmarker = new mapboxgl.Marker()
     .setLngLat([-98.39602, 29.51156])
@@ -53,17 +57,18 @@ var inNOutmarker = new mapboxgl.Marker()
     .addTo(map);
 
 var txRoadHousePopup = new mapboxgl.Popup()
-    .setHTML("<p>Rolls are out of this world!</p>");
+    .setHTML("<h2>Texas RoadHouse</h2> "+
+        "<p>Rolls are out of this world!</p>");
 
 var txRoadHousemarker = new mapboxgl.Marker()
     .setLngLat([-98.33567, 29.56465])
     .setPopup(txRoadHousePopup)
     .addTo(map);
 
-var restarauntArr = ['panderiaPopup', 'inNOutPopup', 'txRoadHousePopup'];
-arr.forEach(element => {
-    console.log(element);
-});
+// restArray.forEach(function) = ['panderiaPopup', 'inNOutPopup', 'txRoadHousePopup'];
+// arr.forEach(element => {
+//     console.log(element);
+// });
 
 
 
