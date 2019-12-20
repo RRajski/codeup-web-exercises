@@ -232,3 +232,84 @@ var dogs = [
 
 return bucket;
 }
+        
+        5. Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array 
+of sandwichObjects 
+that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. 
+Assume the two array inputs are the same length.
+
+    ```js
+//     Example Input:
+
+var breadList  = [
+    "white",
+    "wheat",
+    "rhy",
+    "white"
+];
+
+var fillingList = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
+
+function makeSandwichObjects(breads,fillings){
+    for var i = 0; i<breads.length; i++)
+
+{
+    var sandwichObject = {
+        bread: breads[i];
+    filling: fillings[i];
+}
+    sandwichBucket.push(sandwichObject);
+}
+return sandwichBucket;
+
+
+sandwichBucket.push({
+    bread: breads[i];
+    filling: fillings[i];
+
+})
+
+console.log(makeSandwichObjects(breadList,fillingList));
+
+
+
+
+
+
+
+
+    return sandwichBucket
+
+
+}
+
+// TODO Write a function named keepYellow that accepts an array of strings and returns an array with all the strings that are equal to "yellow"
+
+function keepYellow(strings){
+    var keepYellowBucket = [];
+    strings.forEach(function (str){
+        if (str  === "yellow"){
+            yellowBucket.push(str);
+
+    }
+
+    })
+
+    return yellowBucket;
+}
+return  keepYellowBucket();
+
+console.log(keepYellow(["yellow", "red", "blue", "yellow", "black", "brown", "yellow"]));
+
+
+
+
+
+console.log(keepYellow(["yellow", "red", "blue", "yellow", "black", "brown", "yellow"]));
+
+makeSandwichObjects(breads, fillings) // example call to the function
