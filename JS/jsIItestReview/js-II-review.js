@@ -27,7 +27,7 @@ function double(num) {
 
 function remove3s(arr) {
     let bucket = [];
-    arr.foreach(function(num){
+    arr.foreach(function (num){
         if (num !==3) {
         bucket.push(num);
         }
@@ -35,7 +35,6 @@ function remove3s(arr) {
     return bucket
 
 }
-
 
 
 // write a function named sumAll that returns the sum of all numbers in an array
@@ -66,7 +65,6 @@ function countEvens(arr){
         }
         return evenCount
     }
-
 
 }
 
@@ -155,26 +153,43 @@ capitalize names
 function capitalizeName(name) {
     return name.replace(/\b(\w)/g, s => s.toUpperCase());
 
-    function countOdds(numbers) {
-        var count = 0;
-
-        for(var i = 0;i < numbers.length; i++) {
-            if(numbers[i] % 2 === 1) {
-                count += 1
-            }
-        }return count
-    }
+    // function countOdds(numbers) {
+    //     var count = 0;
+    //
+    //     for(var i = 0;i < numbers.length; i++) {
+    //         if(numbers[i] % 2 === 1) {
+    //             count += 1
+    //         }
+    //     }return count
+    // }
 }
-function mean(numbers) {
-    var mean = 0;
-
-    for (var i = 0; i < numbers.length; i++) {
-        mean += numbers[i];
-    }
-    return mean / numbers.length;
+// function mean(numbers) {
+//     var mean = 0;
+//
+//     for (var i = 0; i < numbers.length; i++) {
+//         mean += numbers[i];
+//     }
+//     return mean / numbers.length;
+// }
 
     function isVowel(str) {
         return ['a', 'e', 'i','o', 'u'].indexOf(str.toLowerCase()) !== -1
     }
+}
+
+function vowel_count(str1)
+{
+    var vowel_list = 'aeiouAEIOU';
+    var vcount = 0;
+
+    for(var x = 0; x < str1.length ; x++)
+    {
+        if (vowel_list.indexOf(str1[x]) !== -1)
+        {
+            vcount += 1;
+        }
+
+    }
+    return vcount;
 }
 
