@@ -340,3 +340,23 @@ console.log(howOld(23,2025));
 
 // We encourage you to add more function calls of your own to test your code!
 
+
+/////////////////////////////////////////////////////////
+
+const city = 'New York City';
+const logCitySkyline = () =>{git st
+    let skyscraper = 'Empire State Building';
+    return 'The stars over the '+ skyscraper + ' in ' + city;
+}
+console.log(logCitySkyline());
+
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+const stars = 'North Star';
+function callMyNightSky(){
+    return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+}
+console.log(callMyNightSky());
+
+// Block Scope
+
