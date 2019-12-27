@@ -40,11 +40,19 @@
 //     return(rank + lastName + ' reporting for duty!');
 // }
 
-// 6. const rollTheDice = () => {
-//     let die1 = Math.floor(Math.random() * 6 + 1)
-//     let die2 = Math.floor(Math.random() * 6 + 1)
-//     return die1 + die2
-// }
+
+
+// 6.
+//
+var die1 = Math.floor(Math.random() * 6 + 1);
+var die2 = Math.floor(Math.random() * 6 + 1);
+
+    function rollTheDice(die1, die2) {
+        return die1 + die2;
+}
+
+console.log(rollTheDice(die1,die2));
+
 
 // 7. Though an object’s mass remains consistent throughout the universe, weight is determined by the force of gravity
 // on an object. Since different planets have different gravity, the same object would weigh different amounts on each of
@@ -64,8 +72,49 @@
 // 'Saturn' weight = earthWeight * 0.916
 // For all other inputs, return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.'
 
+function calculateWeight(earthWeight, planet){
+    if (planet === 'Mercury'){
+        return earthWeight * .378;
+    }
+    else if (planet === 'Venus'){
+        return earthWeight * .907;
+    }
+    else if (planet === 'Mars'){
+        return earthWeight * .377;
+    }
+    else if (planet === 'Jupiter'){
+        return earthWeight * 2.36;
+    }
+    else if (planet === 'Saturn'){
+        return earthWeight * .916;
+    }else{
+        return "Invalid Planet Entry.  Try:Mercury, Venus, Mars, Jupiter, or Saturn.";
+    }
+
+
+}
+console.log(calculateWeight(245, 'Mercury'));
+console.log(calculateWeight(245, 'Venus'));
+console.log(calculateWeight(245, 'Mars'));
+console.log(calculateWeight(245, 'Jupiter'));
+console.log(calculateWeight(245, 'Saturn'));
+console.log(calculateWeight(245, 'Europa'));
+
+
+
 // 7. It can be hard to keep track of what’s truthy or falsy in JavaScript. Write a function, truthyOrFalsy(),
 //     that takes in any value and returns true if that value is truthy and false if that value is falsy.
+
+function truthyOrFalsy(value) {
+    if (value) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+console.log(truthyOrFalsy);
 
 // 8.A person’s number of imaginary friends are always 33% of their total friends.
 //
@@ -75,7 +124,14 @@
 //     Since friends can only come in whole numbers, be sure to round your result before returning it.
 //
 //     The JavaScript Math.round() function will come in handy. Check out the documentation here to figure
-//     out how it works.
+//     out how it works.;
+
+// var numImaginaryFriends = totalFriends * .33;
+//
+// function numImaginaryFriends(totalFriends){
+//     return Math.round(x *.33);
+// }
+// console.log(Math.round(totalFriends));
 
 // 9.Write a function, sillySentence(), that has 3 string parameters and returns the following silly sentence
 // with the blanks filled in by the arguments passed into the function:
@@ -83,6 +139,12 @@
 //
 // sillySentence('excited', 'love', 'functions');
 // // Should return 'I am so excited because I love coding! Time to write some more awesome functions!'
+
+
+function sillySentence(adjective, verb, noun){
+    return 'I am so' +adjective+ 'because I '+verb+ 'coding! Time to write some more awesome' +noun+ '!';
+}
+console.log(sillySentence('excited', 'love', 'functions'));
 
 // 10.
 // Write a function, howOld(), that has two number parameters, age and year, and returns how old someone
