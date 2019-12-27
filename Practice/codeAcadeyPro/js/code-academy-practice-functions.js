@@ -84,7 +84,7 @@
 // sillySentence('excited', 'love', 'functions');
 // // Should return 'I am so excited because I love coding! Time to write some more awesome functions!'
 
-// 10.  1.
+// 10.
 // Write a function, howOld(), that has two number parameters, age and year, and returns how old someone
 // who is currently that age was (or will be) during that year. Handle three different cases:
 //
@@ -96,5 +96,109 @@
 //     'You were [calculated age] in the year [year passed in]'
 // You might find these two variables helpful:
 //
-//     const yearDifference = year - theCurrentYear
-// const newAge = age + yearDifference
+
+
+
+function howOld(age,year){
+    var dateToday = new Date();
+    var thisYear = dateToday.getFullYear();
+
+    var yearDifference = year - thisYear;
+    var newAge = age + yearDifference;
+
+    if (newAge<0){
+        return 'The year' + year + 'was' +newAge+ 'years before you were born';
+    }
+    else if (newAge>age){
+        return ('You will be ' +newAge+ 'in the year ' +year+ '.');
+    }
+    else
+        return 'You were' + newAge + ' in the year' +year+ '.';
+}
+
+
+console.log(howOld(23,2025));
+
+
+
+
+
+// 11
+// Create a function, tipCalculator(), that has two parameters, a string representing the quality of the service received
+// and a number representing the total cost.
+//
+//     Return the tip, as a number, based on the following:
+//     ‘bad’ should return a 5% tip
+// ‘ok’ should return a 15% tip
+// ‘good’ should return a 20% tip
+// ‘excellent’ should return a 30% tip
+// all other inputs should default to 18%
+//
+// tipCalculator('good', 100) // Should return 20
+
+// // Write your function here:
+// function tipCalculator(quality, total){
+//     if (quality === 'bad'){
+//         return (total *.05);
+//     }
+//     else if (quality === 'ok'){
+//         return (total * .15);
+//     }
+//     else if (quality === 'good'){
+//         return (total * .20);
+//     }
+//     else if (quality === 'excellent'){
+//         return (total * .30);
+//     }
+//     else
+//         return (total *.18);
+// }
+// console.log(tipCalculator('bad', 100));
+// console.log(tipCalculator('ok', 100));
+// console.log(tipCalculator('good', 100));
+// console.log(tipCalculator('excellent', 100));
+// console.log(tipCalculator('mediocre', 100));
+
+
+//
+// 12 .Write a function, toEmoticon(), that takes in a string and returns the corresponding emoticon as a
+// string. Use a switch/case, and cover these cases:
+//
+//     'shrug' should return '|_{"}_|'
+//         'smiley face' should return ':)'
+//         'frowny face' should return':('
+//         'winky face' should return ';)'
+//         'heart' should return '<3'
+//         any other input should return '|_(* ~ *)_|'
+
+// // Write your function here:
+// function toEmoticon(str){
+//     if(str === 'shrug'){
+//         return '|_{}_|';
+//     }
+//     else if(str ==='smiley face'){
+//         return ':)';
+//     }
+//     else if(str ==='frowny face'){
+//         return ':(';
+//     }
+//     else if(str ==='winky face'){
+//         return ';)';
+//     }
+//     else if(str ==='heart'){
+//         return '<3'
+//     }
+//     else{
+//         return '|_(*~*)_|'
+//     }
+// }
+
+
+
+// Uncomment the line below when you're ready to try out your function
+// console.log(toEmoticon("shrug"));
+
+// Should print  '|_(* ~ *)_|'
+
+// We encourage you to add more function calls of your own to test your code!
+
