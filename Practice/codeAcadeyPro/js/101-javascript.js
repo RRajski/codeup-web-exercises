@@ -889,3 +889,32 @@ assert(thirdToLast([1, 2, 3, 4]), 2, "Exercise 56");
 assert(thirdToLast(["JS", "is", "awesome"]), "JS", "Exercise 56");
 assert(thirdToLast(["strawberry", "kiwi", "mango", "guava"]), "kiwi", "Exercise 56");
 addToDone("Exercise 56 is correct.")
+
+// // Exercise 57
+// // Write a function definition named firstAndSecond that takes in sequence and returns the first and second value of that sequence as an array
+
+function firstAndSecond(value) {
+    var sequence = value.splice(0, 2);
+
+    return sequence
+}
+assert(firstAndSecond([1, 2, 3, 4]), [1, 2], "Exercise 57");
+assert(firstAndSecond(["JS", "is", "awesome"]), ["JS", "is"], "Exercise 57");
+assert(firstAndSecond(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "kiwi"], "Exercise 57");
+addToDone("Exercise 57 is correct.")
+
+
+// // Exercise 58
+// // Write a function definition named firstAndLast that takes in sequence and returns the first and last value of that sequence as an array
+function firstAndLast(value) {
+    var first = value[0]
+    var last = value[value.length - 1]
+    var sequence = [first, last];
+
+    return sequence
+}
+
+assert(firstAndLast([1, 2, 3, 4]), [1, 4], "Exercise 58");
+assert(firstAndLast(["JS", "is", "awesome"]), ["JS", "awesome"], "Exercise 58");
+assert(firstAndLast(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "guava"], "Exercise 58");
+addToDone("Exercise 58 is correct.")
