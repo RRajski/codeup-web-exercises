@@ -551,3 +551,72 @@ assert(cube(2), 8, "Exercise 31");
 assert(cube(5), 125, "Exercise 31");
 assert(cube(positiveOddNumber), positiveOddNumber * positiveOddNumber * positiveOddNumber, "Exercise 31");
 addToDone("Exercise 31 is correct.")
+
+// // Exercise 32
+// // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
+function squareRoot(num){
+    return (Math.sqrt(num));
+}
+
+assert(squareRoot(4), 2.0, "Exercise 32");
+assert(squareRoot(64), 8.0, "Exercise 32");
+assert(squareRoot(81), 9.0, "Exercise 32");
+addToDone("Exercise 32 is correct.")
+
+
+// // Exercise 33
+// // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
+function subtract (x,y){
+    return(x-y)
+}
+
+assert(subtract(8, 6), 2, "Exercise 33");
+assert(subtract(27, 4), 23, "Exercise 33");
+assert(subtract(12, 2), 10, "Exercise 33");
+addToDone("Exercise 33 is correct.")
+
+// // Exercise 34
+// // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
+function multiply(x,y){
+    return (x*y)
+}
+
+assert(multiply(2, 1), 2, "Exercise 34");
+assert(multiply(3, 5), 15, "Exercise 34");
+assert(multiply(5, 2), 10, "Exercise 34");
+addToDone("Exercise 34 is correct.")
+
+// // Exercise 35
+// // Write a function definition named divide that takes in two numbers and returns the first argument divided by the second argument.
+function divide(num1,num2){
+    return (num1/num2)
+}
+assert(divide(27, 9), 3, "Exercise 35");
+assert(divide(15, 3), 5, "Exercise 35");
+assert(divide(5, 2), 2.5, "Exercise 35");
+assert(divide(10, 2), 5, "Exercise 35");
+addToDone("Exercise 35 is correct.")
+
+
+// // Exercise 36
+// // Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
+function quotient(num1,num2){
+    return Math.floor(num1/num2)
+}
+
+assert(quotient(27, 9), 3, "Exercise 36");
+assert(quotient(5, 2), 2, "Exercise 36");
+assert(quotient(10, 3), 3, "Exercise 36");
+addToDone("Exercise 36 is correct.")
+
+
+// // Exercise 37
+// // Write a function definition named remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
+function remainder(num1,num2){
+    return (num1%num2)
+}
+
+assert(remainder(3, 3), 0, "Exercise 37");
+assert(remainder(5, 2), 1, "Exercise 37");
+assert(remainder(7, 5), 2, "Exercise 37");
+addToDone("Exercise 37 is correct.")
