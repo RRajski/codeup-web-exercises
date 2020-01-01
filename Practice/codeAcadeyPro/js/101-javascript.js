@@ -918,3 +918,188 @@ assert(firstAndLast([1, 2, 3, 4]), [1, 4], "Exercise 58");
 assert(firstAndLast(["JS", "is", "awesome"]), ["JS", "awesome"], "Exercise 58");
 assert(firstAndLast(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "guava"], "Exercise 58");
 addToDone("Exercise 58 is correct.")
+
+// // Exercise 59
+// // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
+function firstToLast(value){
+    value.push(value.shift())
+    return value
+}
+
+assert(firstToLast([1, 2, 3, 4]), [2, 3, 4, 1], "Exercise 59");
+assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"], "Exercise 59");
+assert(firstToLast(["strawberry", "kiwi", "mango", "guava"]), ["kiwi", "mango", "guava", "strawberry"], "Exercise 59");
+addToDone("Exercise 59 is correct.")
+
+// // Exercise 60
+// // Write a function definition named sumAll that takes in sequence of numbers and
+// returns all the numbers added together.
+
+function sumAll(numbers){
+    var sum = 0;
+
+    for (var i=0; i <numbers.length; i++){
+        sum += numbers[i]
+    }
+    return sum
+
+}
+
+assert(sumAll([1, 2, 3, 4]), 10, "Exercise 60");
+assert(sumAll([3, 3, 3]), 9, "Exercise 60");
+assert(sumAll([0, 5, 6]), 11, "Exercise 60");
+addToDone("Exercise 60 is correct.")
+
+// //  Exercise 61
+// //  Write a function definition named mean that takes in sequence of numbers and
+// returns the average value
+
+function mean(numbers){
+    var mean = 0
+
+    for (var i = 0; i < numbers.length; i++){
+        mean += numbers[i];
+    }
+    return mean / numbers.length;
+
+}
+assert(mean([1, 2, 3, 4]), 2.5, "Exercise 61");
+assert(mean([3, 3, 3]), 3, "Exercise 61");
+assert(mean([1, 5, 6]), 4, "Exercise 61");
+addToDone("Exercise 61 is correct.")
+
+// // Exercise 62
+// // Write a function definition named median that takes in sequence of numbers and
+// returns the average value
+
+function median(numbers){
+    var median = 0, numsLen = numbers.length;
+    numbers.sort();
+    if (numsLen % 2 === 0) {
+        median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2;
+    } else {
+        median = numbers[(numsLen - 1) / 2];
+    }
+    return median;
+}
+
+assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
+assert(median([1, 2, 3]), 2.0, "Exercise 62");
+assert(median([1, 5, 6]), 5.0, "Exercise 62");
+assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
+addToDone("Exercise 62 is correct.")
+
+
+// // Exercise 63
+// // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
+
+function maxMinusMin(numbers){
+    var max = Math.max(...numbers)
+    var min = Math.min(...numbers)
+    var num = max - min
+    return num
+}
+
+assert(maxMinusMin([1, 2, 2, 8, 3, 4]), 7, "Exercise 63");
+assert(maxMinusMin([1, 1, 2, 3, 9]), 8, "Exercise 63");
+assert(maxMinusMin([2, 2, 3, 3, 3, 7]), 5, "Exercise 63");
+addToDone("Exercise 63 is correct.")
+
+
+// // Exercise 64
+// // Write a function definition named productOfAll that takes in sequence of numbers
+// and returns the product of multiplying all the numbers together
+function productOfAll(numbers) {
+    var productOfAllNum = 1;
+    for(var i = 0;i < numbers.length; i++) {
+        productOfAllNum *= numbers[i];
+    }
+    return productOfAllNum;
+}
+
+assert(productOfAll([1, 2, 3]), 6, "Exercise 64");
+assert(productOfAll([3, 4, 5]), 60, "Exercise 64");
+assert(productOfAll([2, 2, 3, 0]), 0, "Exercise 64");
+addToDone("Exercise 64 is correct.")
+
+
+// // Exercise 65
+// // Write a function definition named getHighestNumber that takes in sequence of numbers and
+// returns the largest number.
+function getHighestNumber(numbers) {
+    var largest = Math.max(...numbers);
+    return largest
+}
+
+assert(getHighestNumber([1, 2, 3]), 3, "Exercise 65");
+assert(getHighestNumber([1, 5, 2, 3, 4]), 5, "Exercise 65");
+assert(getHighestNumber([5, 1, 2, 4, 9]), 9, "Exercise 65");
+addToDone("Exercise 65 is correct.")
+
+// // Exercise 66
+// // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
+function getSmallestNumber(numbers) {
+    var smallest = Math.min(...numbers);
+    return smallest
+}
+
+assert(getSmallestNumber([1, 2, 3]), 1, "Exercise 66");
+assert(getSmallestNumber([3, 5, 9, 8, 1]), 1, "Exercise 66");
+assert(getSmallestNumber([8, 9, 4, 5, 7]), 4, "Exercise 66");
+addToDone("Exercise 66 is correct.")
+
+
+// // Exercise 67
+// // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns
+// the odd numbers in an array.
+function onlyOddNumbers(numbers){
+    var oddnums = numbers.filter(n => n%2);
+    return oddnums
+}
+
+assert(onlyOddNumbers([1, 2, 3]), [1, 3], "Exercise 67");
+assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5], "Exercise 67");
+assert(onlyOddNumbers([-4, -3, 1]), [-3, 1], "Exercise 67");
+addToDone("Exercise 67 is correct.")
+
+
+
+// // Exercise 68
+// // Write a function definition named onlyEvenNumbers that takes in sequence of numbers and returns
+// the even numbers in an array.
+
+function onlyEvenNumbers(numbers){
+    var even = [];
+    for (var i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 === 0) {
+            even.push(numbers[i])
+        }
+    }
+    return even
+}
+
+
+assert(onlyEvenNumbers([1, 2, 3]), [2], "Exercise 68");
+assert(onlyEvenNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-4, -2, 2, 4], "Exercise 68");
+assert(onlyEvenNumbers([-4, -3, 1]), [-4], "Exercise 68");
+addToDone("Exercise 68 is correct.")
+
+
+// // Exercise 69
+// // Write a function definition named onlyPositiveNumbers that takes in sequence of numbers and
+// returns the positive numbers in an array.
+
+function onlyPositiveNumbers(numbers){
+    var positive = [];
+    for (var i = 0; i < numbers.length; i++) {
+        if(numbers[i] > 0) {
+            positive.push(numbers[i])
+        }
+    }
+    return positive
+}
+
+assert(onlyPositiveNumbers([1, 2, 3]), [1, 2, 3], "Exercise 69");
+assert(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [1, 2, 3, 4, 5], "Exercise 69");
+assert(onlyPositiveNumbers([-4, -3, 1]), [1], "Exercise 69");
+addToDone("Exercise 69 is correct.")
