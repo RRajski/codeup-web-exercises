@@ -1327,9 +1327,64 @@ function onlyNegativeOdds(numbers) {
     return odds
 }
 
-
 assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");
 assert(onlyNegativeOdds([3, 3, 4, 6]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -3, 4, -1, -4]), [-3, -1], "Exercise 80");
 addToDone("Exercise 80 is correct.")
+
+// // Exercise 81
+// // Write a function definition named shortestString that takes in an array of strings and
+// returns the shortest string in the array.
+
+function shortestString(arr){
+    let shortLength = Infinity;
+    let shortest = "";
+    if(arr.length > 0){
+        for(let i = 0; i < arr.length; i++){
+            if(typeof arr[i] === "string" && arr[i].length < shortLength){
+                shortest = arr[i];
+                shortLength = arr[i].length;
+            }
+        }
+    }
+    return shortest;
+}
+
+assert(shortestString(["kiwi", "mango", "strawberry"]), "kiwi", "Exercise 81");
+assert(shortestString(["hello", "everybody"]), "hello", "Exercise 81");
+assert(shortestString(["mary", "had", "a", "little", "lamb"]), "a", "Exercise 81");
+addToDone("Exercise 81 is correct.")
+
+
+// // Exercise 82
+// // Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
+function longestString(arr){
+    let longest = arr[0];
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+
+assert(longestString(["kiwi", "mango", "strawberry"]), "strawberry", "Exercise 82");
+assert(longestString(["hello", "everybody"]), "everybody", "Exercise 82");
+assert(longestString(["mary", "had", "a", "little", "lamb"]), "little", "Exercise 82");
+addToDone("Exercise 82 is correct.")
+
+
+// // Exercise 83
+// // Write a function definition named getUniqueValues that takes in an
+// array and returns an with only the unique values from that array.
+function getUniqueValues(arr){
+    var unique = arr.filter((item, i, ar) => arr.indexOf(item) === i);
+    return unique
+}
+
+
+assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"], "Exercise 83");
+assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"], "Exercise 83");
+assert(getUniqueValues(["mary", "had", "a", "little", "lamb", "little", "lamb", "little", "lamb"]), ["mary", "had", "a", "little", "lamb"], "Exercise 83");
+addToDone("Exercise 83 is correct.")
