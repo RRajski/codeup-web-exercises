@@ -1557,3 +1557,137 @@ function totalOfBookPrices(obj){
 
 assert(totalOfBookPrices(books), 122.9, "Exercise 92")
 addToDone("Exercise 92 is complete.")
+
+// // Exercise 93
+// // Write a function named getAverageBookPrice that takes in a array of objects and
+// returns the average book price.
+
+function getAverageBookPrice(obj){
+    var sum = 0;
+    for(var i = 0; i < obj.length; i++){
+        sum += obj[i].price;
+    }
+    return(sum / obj.length);
+}
+
+assert(getAverageBookPrice(books), 30.725, "Exercise 93");
+addToDone("Exercise 93 is complete.")
+
+
+// // Exercise 94
+// // Write a function called highestPriceBook that takes in the above defined array of
+// objects "books" and returns the object containing the title, price, and author of the
+// book with the highest priced book.
+// // Hint: Much like sometimes start functions with a variable set to zero, you may want
+// to create a object with the price set to zero to compare to each object's price in the
+// array
+
+function highestPriceBook(obj){
+    let mostExpensiveBook = false;
+    for(let i = 0; i < obj.length; i++){
+        if(!mostExpensiveBook || obj[i].price > mostExpensiveBook.price){
+            mostExpensiveBook = obj[i];
+        }
+    }
+    return mostExpensiveBook;
+}
+
+assert(highestPriceBook(books), {
+    "title": "The Visual Display of Quantitative Information",
+    "price": 38.00,
+    "author": "Edward Tufte"
+}, "Exercise 94");
+
+addToDone("Exercise 94 is complete")
+
+
+
+// // Exercise 95
+// // Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
+// // Hint: Much like sometimes start functions with a variable set to zero or float('inf'), you may want to create a object with the price set to float('inf') to compare to each object in the array
+
+function lowestPriceBook(obj){
+    let leastExpensiveBook = false;
+    for(let i = 0; i < obj.length; i++){
+        if(!leastExpensiveBook || obj[i].price < leastExpensiveBook.price){
+            leastExpensiveBook = obj[i];
+        }
+    }
+    return leastExpensiveBook;
+}
+
+
+
+
+//   let lowestPriceBook = false;
+//   for(let i = 0; i < obj.length; i++){
+//     if(!lowestPriceBook || book[i].price < lowestPriceBook.price){
+//       lowestPriceBook = book[i];
+//     }
+//   }
+//   return Math.min(...books())
+// }
+
+assert(lowestPriceBook(books), {
+    "title": "Weapons of Math Destruction",
+    "author": "Cathy O'Neil",
+    "price": 17.44
+}, "Exercise 95");
+addToDone("Exercise 95 is complete.")
+
+
+const shoppingCart = {
+    "tax": .08,
+    "items": [
+        {
+            "title": "orange juice",
+            "price": 3.99,
+            "quantity": 1
+        },
+        {
+            "title": "rice",
+            "price": 1.99,
+            "quantity": 3
+        },
+        {
+            "title": "beans",
+            "price": 0.99,
+            "quantity": 3
+        },
+        {
+            "title": "chili sauce",
+            "price": 2.99,
+            "quantity": 1
+        },
+        {
+            "title": "chocolate",
+            "price": 0.75,
+            "quantity": 9
+        }
+    ]
+}
+
+
+// // Exercise 96
+// // Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
+// // Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
+function getTaxRate(shoppingCart){
+    return shoppingCart.tax;
+}
+
+
+assert(getTaxRate(shoppingCart), .08, "Exercise 96");
+addToDone("Exercise 96 is complete")
+
+
+
+// // Exercise 97
+// // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
+// // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
+
+function numberOfItemTypes(shoppingCart){
+    return shoppingCart.items.length;
+}
+
+assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
+addToDone("Exercise 97 is complete.")
