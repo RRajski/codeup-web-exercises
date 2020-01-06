@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Jquery</h1>
+<h1>Happy New Year!</h1>
+<h3>New Year Resolutions</h3>
+<ul>
+    <li class="health" >Lose weight</li>
+    <li class="social" >hang out with awesome folks</li>
+    <li class="health">Bike</li>
+    <li class="social">Roll</li>
+    <li class="health">Make doctor appts.</li>
+</ul>
+
+<br>
+<div id="text container">
+    <p id="textExplanation">This is the first assignment of the new Year.  New Year, new language but not a new language.
+    </p>
+
+</div>
+
+<div id="second list">
+    <ol><h3>Academic goals</h3>
+        <li class="codeUp">Go past January 27</li>
+        <li>get grade to 80</li>
+        <li class="codeUp">Practice</li>
+        <li class="codeUp">Continue to Check in weekly</li>
+    </ol>
+
+
+</div>
+
+
+        <form name="'resForm" action="">
+            <div>
+                <label for="goal">What do you want to do this year?</label>
+                <input id="goal" name="goal" type="text">
+            </div>
+        </form>
+<button id="button" class="cyan">Click Me!</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    (function () {
+        "use strict";
+        $(document).ready(function () {
+            // Jquery code goes here,
+            // alert("Look, we are using Jquery!");
+            // console.log($);
+            // console.log(jQuery);
+            //
+            // $("#button").click(function() {
+            //     alert("You clicked the button.")
+
+            });
+            // var listItems =getElementsByTagName('li');
+            //
+            // for (var i=0;i<listItems.length; i++){
+            //     listItems[i].setAttribute("class","purple");
+            // }
+
+            // $("li"").addClass("purple"));
+
+        // var contents = $('#second list').html();
+        // alert(contents);
+        //
+        // $('.health').css('background-color', 'yellow');
+        //
+        // // $('*').css('border', '1px solid #F00');
+        //
+        // $('.codeUp').css('border', '1px solid red');
+
+        // $('li').css('font-size', '20px');
+        $('h1,p,li').css('background-color', 'yellow');
+        // $('p').css('background-color', 'magenta');
+        $('li').css('font-size', '20px');
+        var contents = $('h1').html();
+        alert(contents);
+
+
+
+
+
+        })();
+
+
+
+
+</script>
+
+
+</body>
+</html>

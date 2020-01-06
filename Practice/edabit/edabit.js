@@ -166,11 +166,35 @@ function toStr(int) {
 //     Nemo will always look like Nemo, and not NeMo or other capital variations.
 //     Nemo's, or anything that says Nemo with something behind it, doesn't count as Finding Nemo.
 //     If there are multiple Nemo's in the sentence, only return for the first one.
-function findNemo(sentance) {
-    let str = sentance.split(' ');
-    for (let i = 0; i < str.length; i++){
-        if (str[i] == "Nemo") return "I found Nemo at " + (i+1) + "!";
-    }
+// function findNemo(sentance) {
+//     let str = sentance.split(' ');
+//     for (let i = 0; i < str.length; i++){
+//         if (str[i] == "Nemo") return "I found Nemo at " + (i+1) + "!";
+//     }
+//
+//     return "I can\'t find Nemo :(";
+// }
+//
+// Absolute Sum
+// Take an array of integers (positive or negative or both) and return the sum of the absolute
+// value of each element.
+//
+//     Examples
+// getAbsSum([2, -1, 4, 8, 10]) ➞ 25
+//
+// getAbsSum([-3, -4, -10, -2, -3]) ➞ 22
+//
+// getAbsSum([2, 4, 6, 8, 10]) ➞ 30
+//
+// getAbsSum([-1]) ➞ 1
+// Notes
+// The term "absolute value" means to remove any negative sign in front of a number,
+// and to think of all numbers as positive (or zero).
 
-    return "I can\'t find Nemo :(";
-}
+function getAbsSum(arr){
+    var sum = 0;
+    for (var i=0; i<arr.length;i++) {
+        sum += Math.abs(arr[i]);
+    }
+    return sum
+    }
