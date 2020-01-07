@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Jquery</h1>
-<h1>Happy New Year!</h1>
-<h3>New Year Resolutions</h3>
+<h1 id="lesson">Jquery</h1>
+<h1 id="back in  class">Happy New Year!</h1>
+<h3 id="resolutions">New Year Resolutions</h3>
 <ul>
     <li class="health" >Lose weight</li>
-    <li class="social" >hang out with awesome folks</li>
+    <li class="social codeUp" >hang out with awesome folks</li>
     <li class="health">Bike</li>
     <li class="social">Roll</li>
     <li class="health">Make doctor appts.</li>
@@ -28,7 +28,7 @@
         <li class="codeUp">Go past January 27</li>
         <li>get grade to 80</li>
         <li class="codeUp">Practice</li>
-        <li class="codeUp">Continue to Check in weekly</li>
+        <li class="codeUp">Continue to check in weekly</li>
     </ol>
 
 
@@ -46,15 +46,15 @@
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script>
     (function () {
-        "use strict";
-        $(document).ready(function () {
-            // Jquery code goes here,
-            // alert("Look, we are using Jquery!");
-            // console.log($);
-            // console.log(jQuery);
-            //
-            // $("#button").click(function() {
-            //     alert("You clicked the button.")
+            "use strict";
+            $(document).ready(function () {
+                // Jquery code goes here,
+                // alert("Look, we are using Jquery!");
+                // console.log($);
+                // console.log(jQuery);
+                //
+                // $("#button").click(function() {
+                //     alert("You clicked the button.")
 
             });
             // var listItems =getElementsByTagName('li');
@@ -65,21 +65,63 @@
 
             // $("li"").addClass("purple"));
 
-        // var contents = $('#second list').html();
-        // alert(contents);
-        //
-        // $('.health').css('background-color', 'yellow');
-        //
-        // // $('*').css('border', '1px solid #F00');
-        //
-        // $('.codeUp').css('border', '1px solid red');
+            // var contents = $('#second list').html();
+            // alert(contents);
+            //
+            // $('.health').css('background-color', 'yellow');
+            //
+            // // $('*').css('border', '1px solid #F00');
+            //
+            // $('.codeUp').css('border', '1px solid red');
 
-        // $('li').css('font-size', '20px');
-        $('h1,p,li').css('background-color', 'yellow');
-        // $('p').css('background-color', 'magenta');
-        $('li').css('font-size', '20px');
-        var contents = $('h1').html();
-        alert(contents);
+            // alert($("#button").html());
+            //
+            // // $('li').css('font-size', '20px');
+            // $('h1,p,li').css('background-color', 'yellow');
+            // // $('p').css('background-color', 'magenta');
+            // $('li').css('font-size', '20px');
+            // var contents = $('h1').html();
+            // alert(contents);
+
+            // Mouse Events exericise
+
+            $('#lesson').click(
+                function () {
+                    $(this).css('background-color', 'red');
+                },
+                // function () {
+                //     $(this).css('background-color', '#FFF');
+                // }
+            );
+// Add JQuery code to set font size
+            $('#textExplanation').dblclick(
+                function () {
+                    $(this).css('font-size', '50px');
+                },
+                // function() {
+                //     $(this).css('background-color', '#FFF');
+                // }
+            );
+
+            // $('#lesson').click(function() {
+            //     $(alert('h1 with id lesson title was clicked');
+            // });
+        $('li').hover(
+            function() {
+                $('li').css('color', 'red');
+            },
+            function() {
+                $('li').css('color', 'black');
+            }
+        );
+
+
+
+
+
+
+
+    ;
 
 
 
@@ -95,3 +137,104 @@
 
 </body>
 </html>
+<!--Exercise walkthrough-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>jQuery Exercises</title>-->
+<!--    <style>-->
+<!--        .redBackground {-->
+<!--            background-color:red-->
+<!--        }-->
+<!--        .greenText {-->
+<!--            color:green-->
+<!--        }-->
+<!--        .purple {-->
+<!--            background:purple;-->
+<!--        }-->
+<!--        .cyan {-->
+<!--            color:cyan;-->
+<!--        }-->
+<!--        .outline {-->
+<!--            border: 1px black solid;-->
+<!--        }-->
+<!--        .highlight {-->
+<!--            background: yellow;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Happy New Year!</h1>-->
+<!--<h1>2020 Resolutions</h1>-->
+<!--<p>These are our Resolutions for the new year.</p>-->
+<!--<ul id="resolutions">-->
+<!--    <li class="odd">Gain Weight</li>-->
+<!--    <div id="important">-->
+<!--        <li class="codeup">Get an awesome career started!</li>-->
+<!--        <li class="odd codeup">Spend more time with awesome people</li>-->
+<!--    </div>-->
+<!--    <li class="codeup">Meditate More</li>-->
+<!--    <li>Get Healthier</li>-->
+<!--    <li class="">Pay off debt</li>-->
+<!--</ul>-->
+
+<!--<p>These are our Resolutions for the next new year.</p>-->
+<!--<ul>-->
+<!--    <li>Learn to ride a bike.</li>-->
+<!--</ul>-->
+<!--<form id="codeup" name="resForm" action="">-->
+<!--    <div>-->
+<!--        <label for="goal">What do you want to do this year?</label>-->
+<!--        <input id="goal" name="goal" type="text">-->
+<!--    </div>-->
+
+<!--</form>-->
+<!--<button id="button" class="cyan">Click Me!</button>-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.js"></script>-->
+<!--<script>-->
+<!--    (function () {-->
+<!--        "use strict";-->
+<!--        $(document).ready(function () {-->
+<!--            /** jQuery Selectors Exercise */-->
+<!--            // //our jQuery code goes here-->
+<!--            // // alert(jQuery("#resolutions").html());-->
+<!--            // // $(".codeup").css("border", "1px solid red");-->
+<!--            // $("li").css("font-size", "20px");-->
+<!--            // // $("h1,p,.codeup").addClass("highlight");-->
+<!--            // // alert($("h1").html());-->
+<!--            // $(".codeup").addClass("greenText").hover(mouseOverCodeup,mouseOutCodeup)-->
+<!--            // function mouseOverCodeup(){-->
+<!--            //     console.log("hover over");-->
+<!--            // }-->
+<!--            // function mouseOutCodeup() {-->
+<!--            //     console.log("hover out");-->
+<!--            // }-->
+<!--            /** jQuery Mouse Events Exercise */-->
+<!--            // TODOne: Add jQuery code that will change the background color of an h1 element when clicked.-->
+<!--            $("h1").click(function () {-->
+<!--                $(this).css("background-color", "palevioletred");-->
+<!--            });-->
+<!--            // TODOne: Make all paragraphs have a font size of 18px when they are double clicked.-->
+<!--            $("p").dblclick(function () {-->
+<!--                $(this).css("font-size", "18px");-->
+<!--            });-->
+<!--            // TODOne: Set all li text color to red when the mouse is hovering; reset to black when it is not.-->
+<!--            $('li').hover(function () {-->
+<!--                $('li').css('color', 'red');-->
+<!--            }, function () {-->
+<!--                $('li').css('color', 'black');-->
+<!--            });-->
+<!--            // $('li')-->
+<!--            //     .mouseenter(function() {-->
+<!--            //         $('li').css('color', 'blue');-->
+<!--            //     })-->
+<!--            //     .mouseout(function () {-->
+<!--            //         $('li').css('color', 'black');-->
+<!--            //     })-->
+<!--        })-->
+<!--    })();-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
