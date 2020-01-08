@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,11 +10,61 @@
         .invisible {
             visibility: hidden;
         }
+        #fade-in{
+            display: none;
+        }
+
+        button{
+        }
+        #Badlands, #Arches,#state-parks-Alaska {
+            display: none;
+        }
+
 
     </style>
 
 </head>
 <body>
+
+<!--At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?"-->
+<!--and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.-->
+
+
+<div id="header">
+
+<h1>Would you like to sign up for our newsletter?</h1>
+    <span><button id="close-news">x-news</button></span>
+
+
+<!--    <span><strong>X</strong></span>-->
+
+<h2 id="fade-in">Have you registered for my site?</h2>
+
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+</button>
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--                <h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                ...-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
 <h1 id="styler">Top Ten Questions asked of Super Heroes/Villains?</h1>
 <dl>
     <dt class="highlighted"><strong>10.Joker</strong></dt>
@@ -43,7 +93,7 @@
 
 <div id="first list">
 
-<h3 class="parks">National Parks</h3>
+<h3 id="National parks">National Parks</h3>
         <ul id="Arches">
                 <li> Arches</li>
                  <li>Badlands</li>
@@ -54,8 +104,8 @@
         </div>
     <br>
 
-    <div id="second list">
-<h3 class="parks">State Parks of Arizona</h3>
+    <div id="Arizona">
+<h3 id="State Parks of Arizona">State Parks of Arizona</h3>
         <ul id="Badlands">
                 <li>Abilene</li>
                  <li>Big Bend</li>
@@ -67,8 +117,8 @@
     </div>
     <br>
 
-<h3 class="parks">State Parks of Alaska</h3>
-        <ul id="state-parks-texas">
+<h3 id="parks">State Parks of Alaska</h3>
+        <ul id="state-parks-Alaska">
             <li>Abilene</li>
              <li>Big Bend</li>
             <li>Choke Canyon</li>
@@ -90,95 +140,120 @@
 </div>
 
 
-</div>
-
 <script src="JS/jquery-2.2.4.js"></script>
 <script>
-    "use strict";
+"use strict";
 
-    $(document).ready(function () {
-        $('#makeVisible').click(function (event) {
-            event.preventDefault();
-            $('dd').toggleClass("invisible");
-        });
+$(document).ready(function () {
 
-        $('dt').click(function () {
-            $(this).css("background-color", "yellow");
 
-        });
-    })
+    $('#makeVisible').click(function (event) {
+        event.preventDefault();
+        $('dd').toggleClass("invisible");
+    });
+
+    $('dt').click(function () {
+        $(this).css("background-color", "yellow");
+    });
 
     $('#last').click(function (event) {
         $('li:last-child').css("background-color", "yellow");
-
     });
-
-
-        // $('li').each(function(index) {
-        //     console.log($('li'));
-        //     $('li:last-child').css("background-color", "yellow");
-
-        // });
-
-
-    //
-    //     $('li').last().css("background-color", "yellow");
-    //     $('li').children().css('background-color', 'yellow');
-    //
-    // });
-    //
-
-
-
-
 
     $('h3').click(function () {
         $(this).next().children().css('font-weight', 'bold');
-
-
+        $(this).next().slideToggle();
     });
+    $('#fade-in').fadeIn(5000);
+    // $('h2').click(function () {
+
+    // });
+
 
     $('li').click(function () {
-        $(this).parent().children().css('color','blue');
+        $(this).parent().children().css('color', 'blue');
+    });
+
+
+// $('#marks the spot').click(function () {
+//     $('#marks the spot').hide('#header');
+//     $( ".target" ).hide();
+// });
+
+
+        // $("#marks-the-spot").hide();
+        // $("x").click(function (event) {
+        //     event.preventDefault();
+        //     $(this).hide();
+
+        // $("#marks-the-spot").click(function(){
+        //     $('#header').hide();
+        // });
+
+            $("#close-news").click(function () {
+                console.log("close news btn clicked");
+                $("#header").hide(1000);
+            });
+
+            // $('#parks').click(function() {
+            //     $('ul').slideUp();
+            // });
+
+            // $('.parks').click(function() {
+            //     $('.parks').fadeToggle(1500);
+            // });
+
+            // $('h3').click(function() {
+            //     $('this').next().slideToggle();
+            // })
+
 
 
     });
 
-    //
-    // $('ul').last().children().click(function () {
-    //     $('li').first().css();
+
+    // #Badlands, #Arches,#state-parks-Alaska
 
 
 
+            // $( "#header" ).hide();
+            // $( "#marks-the-spot" ).click(function( event ) {
+            //     event.preventDefault();
+            //     $( this ).hide();
+            // });
+
+// $('#marks-the-spot').click(function (event) {
+//     $('#marks-the-spot').hide();
+// });
 
 
 
+//
+// $('ul').last().children().click(function () {
+//     $('li').first().css();
 
 
+// $(document).keyup(function(event) {
+//     console.log(event.keyCode);
+// });
+//
+// $(document).ready(function () {
+//     $('dd').click(function () {
+//         $('dd').toggleClass(".visible");
+//     });
+//
+// $("dt").click(function() {
+//     $(this).toggleClass("highlighted")
+// })
+//
+//     $("invisible").css('visible');
+//
+//
+// });
+// });
 
 
-
-
-
-
-    // $(document).keyup(function(event) {
-    //     console.log(event.keyCode);
-    // });
-    //
-    // $(document).ready(function () {
-    //     $('dd').click(function () {
-    //         $('dd').toggleClass(".visible");
-    //     });
-    //
-    // $("dt").click(function() {
-    //     $(this).toggleClass("highlighted")
-    // })
-    //
-    //     $("invisible").css('visible');
-    //
-    //
-    // });
-            </script>
+</script>
 
 </body>
 
