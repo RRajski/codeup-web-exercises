@@ -39,10 +39,56 @@
     <dd class="invisible">Can I get my money and two hours of my like back for Green Lantern?</dd>
 </dl>
 
+<div id= "main">
+
+<div id="first list">
+
+<h3 class="parks">National Parks</h3>
+        <ul id="Arches">
+                <li> Arches</li>
+                 <li>Badlands</li>
+                <li>Carlsbad Caverns</li>
+                <li>Denali</li>
+        </ul>
+
+        </div>
+    <br>
+
+    <div id="second list">
+<h3 class="parks">State Parks of Arizona</h3>
+        <ul id="Badlands">
+                <li>Abilene</li>
+                 <li>Big Bend</li>
+                 <li>Choke Canyon</li>
+                <li>Davis Mountains</li>
+
+        </ul>
+
+    </div>
+    <br>
+
+<h3 class="parks">State Parks of Alaska</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+             <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+        </ul>
+    <div id="third list">
+
+</div>
+
+
 
 <a href="#" id="makeVisible">Click to view FAQ answers.</a>
 <br>
+<a href="#" id="last">Click to highlight the last Li</a>
+<br>
+
 <a href="#"  id="highlight">Click to highlight FAQs</a>
+
+</div>
+
 
 </div>
 
@@ -61,6 +107,58 @@
 
         });
     })
+
+    $('#last').click(function (event) {
+        $('li:last-child').css("background-color", "yellow");
+
+    });
+
+
+        // $('li').each(function(index) {
+        //     console.log($('li'));
+        //     $('li:last-child').css("background-color", "yellow");
+
+        // });
+
+
+    //
+    //     $('li').last().css("background-color", "yellow");
+    //     $('li').children().css('background-color', 'yellow');
+    //
+    // });
+    //
+
+
+
+
+
+    $('h3').click(function () {
+        $(this).next().children().css('font-weight', 'bold');
+
+
+    });
+
+    $('li').click(function () {
+        $(this).parent().children().css('color','blue');
+
+
+    });
+
+    //
+    // $('ul').last().children().click(function () {
+    //     $('li').first().css();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // $(document).keyup(function(event) {
