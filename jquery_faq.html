@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .centered {
+            text-align: center;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1 id="styler">Top Ten Questions asked of Super Heroes/Villains?</h1>
+<dl>
+    <dt class="highlighted"><strong>10.Joker</strong></dt>
+    <dd class="invisible">Why so serious?</dt>
+    <dt class="highlighted"><strong>9. Black Widow</strong></dt>
+    <dd class="invisible">Is it weird that your origin story movie is being released after you die?</dd>
+    <dt class="highlighted"><strong>8.  Wolverine</strong></dt>
+    <dd class="invisible">Man or Beast?</dd>
+    <dt class="highlighted"><strong>7.  Hulk</strong></dt>
+    <dd class="invisible">Where do you buy all those purple stretchy pants?</dd>
+    <dt class="highlighted"><strong>6.  Captain America</strong></dt>
+    <dd class="invisible">Do you feel like a man out of time?</dd>
+    <dt class="highlighted"><strong>5. Wonder Woman</strong></dt>
+    <dd class="invisible">I wonder woman where you got the magic lasso from?</dd>
+    <dt class="highlighted"><strong>4. Cable</strong></dt>
+    <dd class="invisible">Is it weird that you are one-eyed-Willie, Thanos and the son of Barbara Streisand?</dd>
+    <dt class="highlighted"><strong>3. Flash</strong></dt>
+    <dd class="invisible">Who would win in a foot race betwen you and SuperMan?</dd>
+    <dt class="highlighted"><strong>2. Teenage megasonic warhead</strong></dt>
+    <dd class="invisible">Longest Name ever</dd>
+    <dt class="highlighted">And the Number <strong>1</strong> most frequently asked question of <strong>DeadPool</strong> is...</dt>
+    <dd class="invisible">Can I get my money and two hours of my like back for Green Lantern?</dd>
+</dl>
+
+
+<a href="#" id="makeVisible">Click to view FAQ answers.</a>
+<br>
+<a href="#"  id="highlight">Click to highlight FAQs</a>
+
+</div>
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+        $('#makeVisible').click(function (event) {
+            event.preventDefault();
+            $('dd').toggleClass("invisible");
+        });
+
+        $('dt').click(function () {
+            $(this).css("background-color", "yellow");
+
+        });
+    })
+
+
+    // $(document).keyup(function(event) {
+    //     console.log(event.keyCode);
+    // });
+    //
+    // $(document).ready(function () {
+    //     $('dd').click(function () {
+    //         $('dd').toggleClass(".visible");
+    //     });
+    //
+    // $("dt").click(function() {
+    //     $(this).toggleClass("highlighted")
+    // })
+    //
+    //     $("invisible").css('visible');
+    //
+    //
+    // });
+            </script>
+
+</body>
+
+</html>
