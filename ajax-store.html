@@ -4,6 +4,12 @@
     <title>Online Store</title>
 </head>
 <body>
+</div id=main-container>
+<button id="reload"><strong>Reload Page</strong></button>
+
+<!--</button>class="load_more"><a id="more_link" href="#">Load more <i class="icon-custom_arrow"></i></a></h2>-->
+<!--</div>-->
+
 <div id="store">
 
 <h1>My Tool Store</h1>
@@ -38,7 +44,7 @@
         var data = $.ajax("data/inventory.json/")
                     .done(function(title){
                         console.log(title);
-                        alert("Load was performed.");
+                        // alert("Load was performed.");
                     });
 
     });
@@ -52,21 +58,13 @@
     // var store = $('#insertProducts');
     // var i = $('#insertProducts tr').size() + 1;
 
-    // $('#store').click(function() {
-    //     store.append('<tr><td><select name="Products" id="type"><option value="Debit">Debit</option>
-    //     <option value="Credit">Credit</option></select></td><td><select name="accounts" id="accounts">
-    //     <option value="">SELECT</option><option value="One">One</option><option value="Two">Two</option>
-    //     </select></td><td><input type="text" name="debit_amount" id="debit_amount"/></td><td><input type="text" name="credit_amount" id="credit_amount"/>
-    //     </td><td><a href="#" id="remScnt">Remove</a></td></tr>');
-    //     i++;
-    //     return false;
-    // });
 
+
+    //
     $.ajax("data/inventory.json/")
         .done(function(data){
-            console.log(data);
-            alert("Load was performed.");
-
+                console.log(data);
+                alert("Load was performed.");
 
             var elements = ["title", "quantity", "price", "categories"];
 
@@ -87,65 +85,78 @@
                 $('#insertProducts').append(tr);
             }
 
-
-
-
-
         });
+    function reload(url){
+        $.get(url, function(data){      // $.get will get the content of the page defined in url and will return it in **data** variable
+            $('#reload').append(data);
+        });
+    }
+
+    $('#reload').click(function(e){
+        e.preventDefault();
+        $('#insertProducts').empty()
+        $.ajax('data/inventory.json')
+                .done(function (data) {
+                    console.log(data);
+                    for (var i = 0; i < data.length; ++i) {
+                $('#insertProducts').append(
+                    '<tr>' +
+                    '<td>' + data[i].title + '</td>' +
+                    '<td>' + data[i].quantity + '</td>' +
+                    '<td>' + data[i].price + '</td>' +
+                    '<td>' + data[i].categories + '</td>' +
+                    '</tr>');
+
+            }
+                });
+        // var url = 'http://localhost:63342/codeup-web-exercises/ajax-store.html?_ijt=fskufebtuibdr1qp7jidgshptt#';
+        // reload(url);  // this calls the reload function
+    });
 
 
-        // var elements = ["Title", "Quantity", "Price", "Categories"];
-        //
-        //
-        // for (var i=0; i.obj.length; i++){
-        //     var td;
-        //     var tr=document.createElement('tr');
-        //
-        //     for (var j=0; j < elements.length; ++j){
-        //         td = document.createElement('td');
-        //         td.innerHTML=dataObj[0].data[i][elements[j]];
-        //         tr.appendChild(td);
-        //     }
-        //
-        //     $('#insertProducts').append(tr);
-
-
+    // Part 2
+    // $.ajax('data/inventory.json')
+    //     .done(function (data){
+    //         console.log(data);
+    //         for (var i = 0; i < data.length; ++i) {
+    //             $('#insertProducts').append(
+    //                 '<tr>' +
+    //                 '<td>' + data[i].title + '</td>' +
+    //                 '<td>' + data[i].quantity + '</td>' +
+    //                 '<td>' + data[i].price + '</td>' +
+    //                 '<td>' + data[i].categories + '</td>' +
+    //                 '</tr>');
+    //
+    //
+    //         }
+    //     });
+    //
+    //
+    // // });
+    //
+    // $('#reload').click(function(e){
+    //     e.preventDefault();
+    //     $('#insertProducts').empty()
+    //     $.ajax('data/inventory.json')
+    //         .done(function (data) {
+    //             console.log(data);
+    //             for (var i = 0; i < data.length; ++i) {
+    //         $('#insertProducts').append(
+    //             '<tr>' +
+    //             '<td>' + data[i].title + '</td>' +
+    //             '<td>' + data[i].quantity + '</td>' +
+    //             '<td>' + data[i].price + '</td>' +
+    //             '<td>' + data[i].categories + '</td>' +
+    //             '</tr>');
+    //
+    //     }
+    //         });
+    //
+    //
     // });
 
 
-    //     .callback=function(data){
-    //     for (var i=0; i<data.length; i++){
-    //         var td=document.createElement('td');
-    //         td.innerHTML=dataObj[0].data[i].title;
-    //         var td2=document.createElement('td');
-    //         td2.innerHTML=dataObj[0].data[i].quantity;
-    //         var td3=document.createElement('td');
-    //         td3.innerHTML=dataObj[0].data[i].price;
-    //         var td4=document.createElement('td');
-    //         td4.innerHTML=dataObj[0].data[i].Categories;
-    //
-    //         +<td>                            <td>+
-    //         // var td5=document.createElement('td');
-    //         // td5.innerHTML=dataObj[0].data[i].Label;
-    //         // var td6=document.createElement('td');
-    //         // td6.innerHTML=dataObj[0].data[i].contents;
-    //         // var td7=document.createElement('td');
-    //         // td7.innerHTML=dataObj[0].data[i].test;
-    //
-    //         var tr=document.createElement('tr');
-    //         tr.appendChild(td);
-    //         tr.appendChild(td2);
-    //         tr.appendChild(td3);
-    //         tr.appendChild(td4);
-    //         // tr.appendChild(td5);
-    //         // tr.appendChild(td6);
-    //         // tr.appendChild(td7);
-    //
-    //
-    // //         $('#Table').append(tr);
-    // //
-    // //     }
-    // // }
+
 
 
 
