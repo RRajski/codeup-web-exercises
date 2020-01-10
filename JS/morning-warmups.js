@@ -167,20 +167,65 @@ function addContact(id, refreshCallbackFunction) {
 //     <!--    warmup with team grinch-->
 
 
-function fizzbuzz(num){
-    for (var i=1; i <=num; i++) {
-        if (i % 15 === 0) console.log('fizzbuzz');
-        else if (i % 3 === 0) console.log("fizz");
-        else if (i % 5 === 0) console.log("buzz");
-        else console.log((i));
-    }
-console.log(num);
-    }
+// function fizzbuzz(num){
+//     for (var i=1; i <=num; i++) {
+//         if (i % 15 === 0) console.log('fizzbuzz');
+//         else if (i % 3 === 0) console.log("fizz");
+//         else if (i % 5 === 0) console.log("buzz");
+//         else console.log((i));
+//     }
+// console.log(num);
+//     }
+//
+// for (var i=1; i < 101; i++){
+//     if (i % 15 == 0) console.log("FizzBuzz");
+//     else if (i % 3 == 0) console.log("Fizz");
+//     else if (i % 5 == 0) console.log("Buzz");
+//     else console.log(i);
+// }
 
-for (var i=1; i < 101; i++){
-    if (i % 15 == 0) console.log("FizzBuzz");
-    else if (i % 3 == 0) console.log("Fizz");
-    else if (i % 5 == 0) console.log("Buzz");
-    else console.log(i);
-}
+// January 10 warmup find avergage height of hamsters
 
+var hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "Spetember 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
+
+function mean(arr){
+    var total = 0
+
+    for (var i = 0; i < arr.length; i++){
+        total += numbers[i].heightInMM;
+    }
+    return total / arr.length;
+
+}console.log(mean(heightInMM));

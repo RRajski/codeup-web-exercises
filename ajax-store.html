@@ -79,13 +79,19 @@
                     td.innerHTML=data[i][elements[j]];
                     console.log(data[i]['title']);
                     console.log(data[i]['quantity']);
-                    tr.appendChild(td);
+                    tr.appendChild(td)
                 }
 
                 $('#insertProducts').append(tr);
             }
+            $('h1').css({
+                backgroundColor: "charcoal",
+                color: "red"
+            })
 
         });
+
+        // });
     function reload(url){
         $.get(url, function(data){      // $.get will get the content of the page defined in url and will return it in **data** variable
             $('#reload').append(data);
@@ -108,7 +114,7 @@
                     '</tr>');
 
             }
-                });
+
         // var url = 'http://localhost:63342/codeup-web-exercises/ajax-store.html?_ijt=fskufebtuibdr1qp7jidgshptt#';
         // reload(url);  // this calls the reload function
     });
@@ -153,7 +159,7 @@
     //         });
     //
     //
-    // });
+    });
 
 
 
