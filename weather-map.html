@@ -3,34 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <title>Dark Sky Call</title>
+
+<!--&lt;!&ndash;    Map information&ndash;&gt;-->
+<!--    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />-->
+<!--    <script src="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>-->
+<!--    <link href="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />-->
+<!--    <style>-->
+<!--        body { margin: 0; padding: 0; }-->
+<!--        #map { position: absolute; top: 0; bottom: 0; width: 100%; };-->
+<!--    </style>-->
+
+    <style>
+
+/*        !-- Mapbox CSS -->*/
+/*        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />*/
+/*        <!-- Custom CSS -->*/
+/*        <style>*/
+/*         #map {*/
+/*             !* the width and height may be set to any size *!*/
+/*             width: 100%;*/
+/*             height: 700px;*/
+/*         }*/
+
+        /*css*/
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .card {
+
+            float: left;
+            width: 100%;
+            padding: 10px;
+            justify-content: center;
+            background-color: lightgrey;
+            border: gray 10px;
+            margin: auto 0;
+            /*height: 300px; !* Should be removed. Only for demonstration *!*/
+        }
+
+        /*<!-- Mapbox CSS -->*/
+        /*<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />*/
+        /*<!-- Custom CSS -->*/
+        /*<style>*/
+        /* #map {*/
+        /*     !* the width and height may be set to any size *!*/
+        /*     width: 100%;*/
+        /*     height: 700px;*/
+        /* }*/
+
+
+    </style>
+
+
+
+
+
 </head>
 <body>
 
 <div id="Main Container">
+   \
 
     <div id="NavBar">
 
-        <h1>Dark Sky Weather Map</h1>
+        <h1>     Weather Application</h1>
+
+
+        <h3 id="location">San Antonio</h3>
 
     </div>
+    <div class="d-flex p-2 d-flex justify-content-around">I'm a flexbox container!</div>
 
-    <br>
-
-    <div id="Temperature">
-        <h2 id ="temp">Temperature</h2>
-
+    <div class="card" style="width: 20rem;">
+            <h3 class="Temperature">Current Temp</h3>
+        <div class="card-body">
+            <img class="card-img-top" src="" alt="Card image cap">
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="Cloud Cover"><strong>Cloud cover</strong></li>
+            <br>
+            <li class="Humidity"><strong>Humidity:</strong></li>
+            <br>
+            <li class="Wind"><strong>Wind:</strong></li>
+            <br>
+            <li class="Pressure"><strong>Pressure:</strong></li>
+        </ul>
     </div>
 
-    <div id="minutely">
-        <h2 id="timely">Weather updates every five minutes</h2>
+<!--    Card 1 end-->
+
+<!--    Card 2-->
+
+    <div class="card" style="width: 20rem;">
+        <h3 class="Temperature">Current Temp</h3>
+        <div class="card-body">
+            <img class="card-img-top" src="" alt="Card image cap">
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="Cloud Cover"><strong>Cloud cover</strong></li>
+            <br>
+            <li class="Humidity"><strong>Humidity:</strong></li>
+            <br>
+            <li class="Wind"><strong>Wind:</strong></li>
+            <br>
+            <li class="Pressure"><strong>Pressure:</strong></li>
+        </ul>
     </div>
-    <br>
 
-    <div id="location">
-        <h2 id="locat">Local Weather</h2>
+    <!--    Card 2 end-->
 
 
+    <!--    Card 3 begin-->
+
+    <div class="card" style="width: 20rem;">
+        <h3 class="Temperature">Current Temp</h3>
+        <div class="card-body">
+            <img class="card-img-top" src="" alt="Card image cap">
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="Cloud Cover"><strong>Cloud cover</strong></li>
+            <br>
+            <li class="Humidity"><strong>Humidity:</strong></li>
+            <br>
+            <li class="Wind"><strong>Wind:</strong></li>
+            <br>
+            <li class="Pressure"><strong>Pressure:</strong></li>
+        </ul>
     </div>
+
+    <!--    Card 3 end-->
+
+
+<!--    Question 3-->
+
+<!-- #3   Create an array of JS objects containing a property for each of the following conditions: -->
+<!--    clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, partly-cloudy-night.-->
+
+
+<!--    const weather = {-->
+<!--    clear-day: a,-->
+<!--    clear-night: b,-->
+<!--    rain: c,-->
+<!--    snow: d,-->
+<!--    sleet: e,-->
+<!--    wind: f,-->
+<!--    fog: g,-->
+<!--    cloudy: h,-->
+<!--    partly-cloudy-day: i,-->
+<!--    partly-cloudy-night: j-->
+<!--    }-->
+
+
+
+<!--    const entries = Object.entries(weather);-->
+
+<!--    <h1>My First Mapbox Map!</h1>-->
+
+<!--    &lt;!&ndash; The HTML element that serves as the Mapbox container &ndash;&gt;-->
+<!--    <div id='map'>-->
+
+<!--    &lt;!&ndash; Mapbox JS &ndash;&gt;-->
+<!--    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>-->
+<!--    <script src="JS/keys.js"></script>-->
+<!--    <script src="JS/mapbox-geocoder.utils.js"></script>-->
+<!--    <script src="JS/mapbox-maps-api.js"></script>-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -47,8 +195,92 @@
     });
 
 </script>
+
+<!--    function success(position) {-->
+<!--    latitude = position.coords.latitude;-->
+<!--    longitude = position.coords.longitude;-->
+
+<!--    location.innerHTML =-->
+<!--    "Latitude is " + latitude + "° Longitude is " + longitude + "°";-->
+
+<!--    $.getJSON(-->
+<!--    url + apiKey + "/" + latitude + "," + longitude + "?callback=?",-->
+<!--    function(data) {-->
+<!--    $("#temp").html(data.currently.temperature + "° F");-->
+<!--    $("#minutely").html(data.minutely.summary);-->
+<!--    }-->
+<!--    );-->
+<!--    }-->
+
+<!--    function error() {-->
+<!--    location.innerHTML = "Unable to retrieve your location";-->
+<!--    }-->
+
+<!--    location.innerHTML = "Locating...";-->
+<!--    }-->
+
+<!--    weather();-->
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
+
+
+
+
+
+<!--    Mapbox information-->
+
+<!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>-->
+<!--<link-->
+<!--        rel="stylesheet"-->
+<!--        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"-->
+<!--        type="text/css"-->
+<!--/>-->
+<!--&lt;!&ndash; Promise polyfill script required to use Mapbox GL Geocoder in IE 11 &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>-->
+<!--<div id="map"></div>-->
+
+<!--<script>-->
+<!--    mapboxgl.accessToken = '<your access token here>';-->
+<!--    var map = new mapboxgl.Map({-->
+<!--        container: 'map',-->
+<!--        style: 'mapbox://styles/mapbox/streets-v11',-->
+<!--        center: [-79.4512, 43.6568],-->
+<!--        zoom: 13-->
+<!--    });-->
+
+<!--    map.addControl(-->
+<!--        new MapboxGeocoder({-->
+<!--            accessToken: mapboxgl.accessToken,-->
+<!--            mapboxgl: mapboxgl-->
+<!--        })-->
+<!--    );-->
+<!--</script>-->
+
+
+<!--    Mapbox-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--    <!DOCTYPE html>-->
 <!--    <html>-->

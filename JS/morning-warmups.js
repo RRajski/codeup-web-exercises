@@ -228,4 +228,4 @@ function mean(arr){
     }
     return total / arr.length;
 
-}console.log(mean(heightInMM));
+}console.log(mean(arr));
