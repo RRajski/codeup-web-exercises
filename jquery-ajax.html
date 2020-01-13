@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    $(document).ready(function () {
+
+    var data = $.ajax("https://swapi.co/api/people/13")
+        .done(function(obj){
+          console.log(obj);
+        });
+    // $.ajax("https://pokeapi.co/api/v2/pokemon/2/")
+    //     .done(function (resp) {
+    //         console.log(resp.name);
+    //
+    //     });
+    // $.ajax("https://pokeapi.co/api/v2/pokemon/6/")
+    //     .done(function (resp) {
+    //         console.log(resp.name);
+    //     });
+    $.ajax("https://statsapi.web.nhl.com/api/v1/teams")
+            .done(function (obj) {
+                console.log(obj);
+
+            });
+    $.ajax("https://pokeapi.co/api/v2/pokemon/6/")
+            .done(function (data, status, jqXhr) {
+                console.log(data.name);
+                console.log(status);
+                console.log(jqXhr);
+            });
+    // console.log(jqXhr);
+    // .fail(function (jqXjr,status,error) {
+    //     console.log("call failed");
+    //     console.log(status);
+    //     console.log(error);
+    // .always(function () {
+    //         console.log("finally");
+    //
+    //     })
+    // })
+    // .always(function () {
+    //     console.log("finally");
+    //
+    // })
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+</div id=main-container>
+<button id="reload"><strong>Reload Page</strong></button>
+
+<!--</button>class="load_more"><a id="more_link" href="#">Load more <i class="icon-custom_arrow"></i></a></h2>-->
+<!--</div>-->
+
+<div id="store">
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="JS/jquery-2.2.4.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+    "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+        // $.get("data/inventory.json", function(data){
+        //     .done(function(data){
+        //         console.log(data);
+        var data = $.ajax("data/inventory.json/")
+                    .done(function(title){
+                        console.log(title);
+                        // alert("Load was performed.");
+                    });
+
+    });
+
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+    // var store = $('#insertProducts');
+    // var i = $('#insertProducts tr').size() + 1;
+
+
+
+    //
+    $.ajax("data/inventory.json/")
+        .done(function(data){
+                console.log(data);
+                alert("Load was performed.");
+
+            var elements = ["title", "quantity", "price", "categories"];
+
+            for (var i=0; i<data.length; i++){
+
+                var td;
+                var tr=document.createElement('tr');
+
+                for (var j=0; j < elements.length; ++j){
+                    td = document.createElement('td');
+                    // td.innerHTML=data[i][elements[j]];
+                    td.innerHTML=data[i][elements[j]];
+                    console.log(data[i]['title']);
+                    console.log(data[i]['quantity']);
+                    tr.appendChild(td)
+                }
+
+                $('#insertProducts').append(tr);
+            }
+            $('h1').css({
+                backgroundColor: "charcoal",
+                color: "red"
+            })
+
+        });
+
+        // });
+    function reload(url){
+        $.get(url, function(data){      // $.get will get the content of the page defined in url and will return it in **data** variable
+            $('#reload').append(data);
+        });
+    }
+
+    $('#reload').click(function(e){
+        e.preventDefault();
+        $('#insertProducts').empty()
+        $.ajax('data/inventory.json')
+                .done(function (data) {
+                    console.log(data);
+                    for (var i = 0; i < data.length; ++i) {
+                $('#insertProducts').append(
+                    '<tr>' +
+                    '<td>' + data[i].title + '</td>' +
+                    '<td>' + data[i].quantity + '</td>' +
+                    '<td>' + data[i].price + '</td>' +
+                    '<td>' + data[i].categories + '</td>' +
+                    '</tr>');
+
+            }
+
+        // var url = 'http://localhost:63342/codeup-web-exercises/ajax-store.html?_ijt=fskufebtuibdr1qp7jidgshptt#';
+        // reload(url);  // this calls the reload function
+    });
+
+
+    // Part 2
+    // $.ajax('data/inventory.json')
+    //     .done(function (data){
+    //         console.log(data);
+    //         for (var i = 0; i < data.length; ++i) {
+    //             $('#insertProducts').append(
+    //                 '<tr>' +
+    //                 '<td>' + data[i].title + '</td>' +
+    //                 '<td>' + data[i].quantity + '</td>' +
+    //                 '<td>' + data[i].price + '</td>' +
+    //                 '<td>' + data[i].categories + '</td>' +
+    //                 '</tr>');
+    //
+    //
+    //         }
+    //     });
+    //
+    //
+    // // });
+    //
+    // $('#reload').click(function(e){
+    //     e.preventDefault();
+    //     $('#insertProducts').empty()
+    //     $.ajax('data/inventory.json')
+    //         .done(function (data) {
+    //             console.log(data);
+    //             for (var i = 0; i < data.length; ++i) {
+    //         $('#insertProducts').append(
+    //             '<tr>' +
+    //             '<td>' + data[i].title + '</td>' +
+    //             '<td>' + data[i].quantity + '</td>' +
+    //             '<td>' + data[i].price + '</td>' +
+    //             '<td>' + data[i].categories + '</td>' +
+    //             '</tr>');
+    //
+    //     }
+    //         });
+    //
+    //
+    });
+
+
+
+
+
+
+
+
+// })();
+</script>
+
+</body>
+</html>

@@ -91,6 +91,20 @@ hotelName.textContent = hotelName;
 roomRate.textContent = '$' + roomRate.toFixed(2);
 specialRate.textContent = '$' + hotel.offerPrice();
 
+// Part 2 Calcultate and write out the details of the offer
+
+var expiryMsg;
+var today;
+var elEnds;
+
+function offerExpires(today) {
+    var weekFromToday, day, date, month,year,dayNames, monthNames;
+    weekFromToday = new Date(today.getTime() +7 * 24 * 60 * 60 * 1000);
+    dayNames = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    monthNames = ['January','February','March',]
+
+}
+
 
 
 
