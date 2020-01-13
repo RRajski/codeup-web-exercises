@@ -1,3 +1,3 @@
 var darkSkyKey = "df74ce33ffbe6e88471ea3b2746201c2";
-var mapBoxKey = "pk.eyJ1Ijoic2tpODQwNCIsImEiOiJjazVjajhiemowMHAwM2RvcjEyZTVqMXY1In0.6lCpJAsDfK7HhnSizCQXfA";
+var mapBoxToken = "pk.eyJ1Ijoic2tpODQwNCIsImEiOiJjazVjajhiemowMHAwM2RvcjEyZTVqMXY1In0.6lCpJAsDfK7HhnSizCQXfA";
 var mapBoxKey2 = "pk.eyJ1Ijoic2tpODQwNCIsImEiOiJjazVjamFnZ3QxbTZpM2ZwM3h2dnZ5cnlnIn0.zWeSwfRxvpwmOc5aooXUGQ";
