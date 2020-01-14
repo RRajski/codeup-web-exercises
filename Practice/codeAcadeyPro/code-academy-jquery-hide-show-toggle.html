@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hide, show toggle</title>
+        <link rel="stylesheet" type="text/css" href="css/code-academy-jquery.hid-show-toggle.css">
+</head>
+          <body>
+
+
+<div id="parent">
+
+<div class='heeder-11'><h1>Buttons</h1></div>
+
+    <div class="hider"><button class="hide-button">Hide</button</div>
+
+    <div class="shower"></div><button class="show-button">Show</button></div>
+
+<div class="toggler"><button class="toggle-button">Toggle</button> </div>
+
+<div class="Fadeoutter"><button class="fade-out-button">Fade-out</button></div>
+
+<div class="Fadeinner"><button class="fade-in-button">Fade-in</button></div>
+
+<div class='Toggler'><button class="toggle-button">Toggle</button></div>
+
+<div class='sliderup'><button class="slide-up-button">Slide-up</button></div>
+
+<div class='sliderdown'><button class="slide-down-button">Slide-down</button></div>
+
+<div class='togglerslide'><button class="toggle-slide-button">Toggle-slide</button></div>
+
+<div class='header-22'>Images</div>
+
+    <div class="image-1">Picture 1</div>
+    <div class="image-2">Picture 2</div>
+    <div class="image-3">Picture 3</div>
+</div>
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+
+$('.hide-button').on('click', () => {
+$('.first-image').hide();
+});
+
+$('.show-button').on('click', () => {
+$('.first-image').show();
+});
+
+$('.toggle-button').on('click', () => {
+$('.first-image').toggle();
+});
+
+$('.fade-out-button').on('click', () => {
+$('.fade-image').fadeOut(500);
+});
+
+$('.fade-in-button').on('click', () => {
+$('.fade-image').fadeIn(4000);
+});
+
+$('.fade-toggle-button').on('click', () => {
+$('.fade-image').fadeToggle();
+});
+
+$('.up-button').on('click', () => {
+$('.slide-image').slideUp(100);
+
+});
+
+$('.down-button').on('click', () => {
+$('.slide-image').slideDown('slow');
+
+});
+
+$('.slide-toggle-button').on('click', () => {
+$('.slide-image').slideToggle();
+
+});
+
+});
+
+</body>
+</html>
+
+<!--css-->
+
+<!--.parent {-->
+<!--display: grid;-->
+<!--grid-template-columns: repeat(2, 1fr);-->
+<!--grid-template-rows: repeat(10, 1fr);-->
+<!--grid-column-gap: 0px;-->
+<!--grid-row-gap: 0px;-->
+<!--}-->
+
+<!--.div1 { grid-area: 1 / 1 / 2 / 2; }-->
+<!--.div2 { grid-area: 2 / 1 / 3 / 2; }-->
+<!--.div3 { grid-area: 3 / 1 / 4 / 2; }-->
+<!--.div4 { grid-area: 4 / 1 / 5 / 2; }-->
+<!--.div5 { grid-area: 5 / 1 / 6 / 2; }-->
+<!--.div6 { grid-area: 6 / 1 / 7 / 2; }-->
+<!--.div7 { grid-area: 7 / 1 / 8 / 2; }-->
+<!--.div8 { grid-area: 8 / 1 / 9 / 2; }-->
+<!--.div9 { grid-area: 9 / 1 / 10 / 2; }-->
+<!--.div10 { grid-area: 10 / 1 / 11 / 2; }-->
+<!--.div11 { grid-area: 1 / 2 / 2 / 3; }-->
+<!--.div12 { grid-area: 2 / 2 / 5 / 3; }-->
+<!--.div13 { grid-area: 5 / 2 / 8 / 3; }-->
+<!--.div14 { grid-area: 8 / 2 / 11 / 3; }-->
+
+

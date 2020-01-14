@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Dark Sky Call</title>
+<!--    geocoder-->
+
+
+
     <!-- Mapbox head -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <style>
+        .parent-card{
+            display: flex;
+            flex-direction: row;
+            /*flex-grow: 1;*/
+            /*justify-content: space-around;*/
+            /*padding: 10px;*/
+        }
+
         .todayWeather {
             background-color: lightgrey;
             border: 1px solid gray;
@@ -35,20 +47,36 @@
         }
 
         #main-container {
-            display: grid;
+            display: flex;
+            flex-direction: row;
             grid-template-areas:
                     "header-1 header-1 header-1"
                     "header-22 header-22 header-22"
                     "current-weather tomorrows-weather day-after"
                     "latLong latLong latLong"
                     "map map map";
-            grid-template-rows: 60px 60px 390px 400px;
-            grid-template-columns: 33% 33% 33%;
+            /*grid-template-rows: 60px 60px 390px 400px;*/
+            /*!*grid-template-columns: 33% 33% 33%;*!*/
+            /*grid-template-columns: repeat(3, 1fr);*/
             /*grid-row-gap: 10px;*/
             /*grid-column-gap: 10px;*/
             /*height: 100vh;*/
             /*margin: 10px;*/
         }
+
+        /*.mainBackground {*/
+        /*    display: grid;*/
+        /*    grid-template-columns: repeat(3, 1fr);*/
+        /*    grid-template-rows: repeat(10, 1fr);*/
+        /*    grid-column-gap: 1px;*/
+        /*    grid-row-gap: 2px;*/
+        /*}*/
+
+        /*.div1 { grid-area: 1 / 1 / 2 / 4; }*/
+        /*.div2 { grid-area: 2 / 1 / 3 / 4; }*/
+        /*.div3 { grid-area: 3 / 1 / 6 / 4; }*/
+        /*.div4 { grid-area: 6 / 1 / 7 / 4; }*/
+        /*.div5 { grid-area: 7 / 1 / 11 / 4; }*/
 
         #header-1 {
             grid-area: header-1;
@@ -60,14 +88,17 @@
 
         #current-weather {
             grid-area: current-weather;
+            width: 33.33%;
         }
 
         #tomorrows-weather {
             grid-area: tomorrows-weather;
+            width: 33.3%;
         }
 
         #day-after {
             grid-area: day-after;
+            width: 33.3%;
         }
         #latLong{
             grid-area: lat-long;
@@ -81,6 +112,12 @@
             /*height: 500px;*/
             height: 400px;
             width: 100%;
+
+        }
+
+        weatherType{
+
+            height: 50%;
 
         }
 
@@ -105,49 +142,34 @@
 </head>
 <body>
 
+<!--<div class="parent">-->
+<!--    <div class="div1"> </div>-->
+<!--    <div class="div2"> </div>-->
+<!--    <div class="div3"> </div>-->
+<!--    <div class="div4"> </div>-->
+<!--    <div class="div5"> </div>-->
+<!--</div>-->
+
 <div id="main-container class" class="mainBackground">
 
     <h1 id="header-1">Weather Application</h1>
 
     <h3 id="header-22">San Antonio</h3>
 
+<!--    Card 1 start-->
+
+    <div class="parent-card">
+
 
     <div class="todayWeather" id="current-weather"></div>
 
-    <!--        <h3 class="Temperature">Current Temp</h3>-->
-    <!--        <div class="card-body">-->
-    <!--            <img class="weather pic" src="" alt="Climacon">-->
-    <!--        </div>-->
-    <!--        <ul class="list-group list-group-flush">-->
-    <!--            <li class="Cloud Cover"><strong>Cloud cover</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Humidity"><strong>Humidity:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Wind"><strong>Wind:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Pressure"><strong>Pressure:</strong></li>-->
-    <!--        </ul>-->
-    <!--    </div>-->
-
     <!--    Card 1 end-->
+
 
     <!--    Card 2-->
 
     <div class="tomorrowWeather" id="tomorrows-weather"></div>
-    <!--        <h3 class="Temperature">Current Temp</h3>-->
-    <!--        <div class="card-body">-->
-    <!--            <img class="weather pic" src="" alt="Climacon">-->
-    <!--        </div>-->
-    <!--        <ul class="list-group list-group-flush">-->
-    <!--            <li class="Cloud Cover"><strong>Cloud cover</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Humidity"><strong>Humidity:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Wind"><strong>Wind:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Pressure"><strong>Pressure:</strong></li>-->
-    <!--        </ul>-->
-    <!--    </div>-->
+
 
     <!--    Card 2 end-->
 
@@ -155,22 +177,13 @@
     <!--    Card 3 begin-->
 
     <div class="nextWeather" id="day-after"></div>
-    <!--        <h3 class="Temperature">Current Temp</h3>-->
-    <!--        <div class="card-body">-->
-    <!--            <img class="weather pic" src="" alt="Climacon">-->
-    <!--        </div>-->
-    <!--        <ul class="list-group list-group-flush">-->
-    <!--            <li class="Cloud Cover"><strong>Cloud cover</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Humidity"><strong>Humidity:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Wind"><strong>Wind:</strong></li>-->
-    <!--            <br>-->
-    <!--            <li class="Pressure"><strong>Pressure:</strong></li>-->
-    <!--        </ul>-->
-    <!--    </div>-->
+
 
     <!--    Card 3 end-->
+
+<!--    Latitude-Longitude input begin-->
+
+    </div>
 
     <div id="latLong"> </div>
         <form>
@@ -180,43 +193,20 @@
         <br>
         Longitude:<br>
 
-        <input type="text" name="latitude" placeholder="Enter Latitude Here" id="long">
+        <input type="text" name="latitude" placeholder="Enter Longitude Here" id="long">
 
         <input type="submit" value="Submit" id="go-getter">
         </form>
+</div>
+
+    <!--    Latitude-Longitude input end-->
 
 
-    <!--    <div class="map container">-->
-    <!--&lt;!&ndash;        <div class="row">&ndash;&gt;-->
-    <!--&lt;!&ndash;            <button type="button" class="btn btn-primary" id="reset-button">Reset</button>&ndash;&gt;-->
-    <!--&lt;!&ndash;        </div>&ndash;&gt;-->
-    <!--        <div class="row">-->
-    <!--            <div class="col">-->
-    <!--                <select id="zoom-select">-->
-    <!--                    <option selected disabled>Zoom Level</option>-->
-    <!--                    <option value="5">Zoom Level 5</option>-->
-    <!--                    <option value="15">Zoom Level 15</option>-->
-    <!--                    <option value="20">Zoom Level 20</option>-->
-    <!--                </select>-->
-    <!--            </div>-->
 
-    <!--            <div class="col">-->
-    <!--                <select id="style-select">-->
-    <!--                    <option selected disabled>Map Style</option>-->
-    <!--                    <option value="streets-v11">Street</option>-->
-    <!--                    <option value="dark-v10">Dark</option>-->
-    <!--                    <option value="satellite-v9">Satellite</option>-->
-    <!--                </select>-->
-    <!--            </div>-->
-
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
 
     <!-- The HTML element that serves as the Mapbox container -->
-    <div id='map'>
-    </div>
-</div>
+    <div id='map'></div>
+
 
 <!-- Mapbox JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -231,25 +221,34 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+            type="text/css"
+    />
 <!-- Custom JS -->
 <script>
 
     // (function () {
-    var weatherType = {
-        "clear-day": "img/Cloud-Drizzle-Sun-Alt.svg",
-        "clear-night": "img/Cloud-Fog.svg",
-        "rain": "img/Sun.svg",
-        "snow": "img/Cloud-Sun.svg",
-        "sleet": "img/Cloud-Fog.svg",
-        "wind": "img/Cloud-Rain-Alt.svg",
-        "fog": "img/Cloud-Refresh.svg",
-        "cloudy": "img/Cloud-Snow-Sun.svg",
-        "partly-cloudy-day": "img/Sun.svg",
-        "partly-cloudy-night": "img/Moon.svg"
+    var weatherType  = {
+        "clear-day": "icon/climacons-master/SVG/Cloud-Drizzle-Sun-Alt.svg",
+        "clear-night": "icon/climacons-master/SVG//Cloud-Fog.svg",
+        "rain": "icon/climacons-master/SVG//Sun.svg",
+        "snow": "icon/climacons-master/SVG//Cloud-Sun.svg",
+        "sleet": "icon/climacons-master/SVG//Cloud-Fog.svg",
+        "wind": "icon/climacons-master/SVG//Cloud-Rain-Alt.svg",
+        "fog": "icon/climacons-master/SVG//Cloud-Refresh.svg",
+        "cloudy": "icon/climacons-master/SVG//Cloud-Snow-Sun.svg",
+        "partly-cloudy-day": "icon/climacons-master/SVG//Sun.svg",
+        "partly-cloudy-night": "icon/climacons-master/SVG//Moon.svg"
     };
 
     "use strict";
+
+
+
 
     $(document).ready(function () {
         getWeather(29.4241, -98.4936);
@@ -264,7 +263,7 @@
                 $('.todayWeather').html(
                     '<div class="d-flex-col justify-content-center">' +
                     '<h5 class="d-flex justify-content-center">' + "Current Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[0].icon] + '" class="mt-2" style="width: 30%">' +
+                    '<img src="' + weatherType[weather.daily.data[0].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
                     '<p class="d-flex justify-content-center mt-2">' + weather.currently.temperature + '° F' + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.currently.summary + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.currently.humidity + "%" + '</p>' +
@@ -275,7 +274,7 @@
                 $('.tomorrowWeather').html(
                     '<div class="d-flex-col justify-content-center">' +
                     '<h5 class="d-flex justify-content-center">' + "Tomorrow's Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[1].icon] + '" class="mt-2" style="width: 30%">' +
+                    '<img src="' + weatherType[weather.daily.data[1].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
                     '<p class="d-flex justify-content-center mt-2">' + weather.daily.data[1].temperatureHigh + '° F' + ' / ' + weather.daily.data[1].temperatureLow + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.daily.data[1].summary + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.daily.data[1].humidity + "%" + '</p>' +
@@ -286,7 +285,7 @@
                 $('.nextWeather').html(
                     '<div class="d-flex-col justify-content-center">' +
                     '<h5 class="d-flex justify-content-center">' + "Day after Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[2].icon] + '" class="mt-2" style="width: 30%">' +
+                    '<img src="' + weatherType[weather.daily.data[2].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
                     '<p class="d-flex justify-content-center mt-2">' + weather.daily.data[2].temperatureHigh + '° F' + ' / ' + weather.daily.data[2].temperatureLow + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.daily.data[2].summary + '</p>' +
                     '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.daily.data[2].humidity + "%" + '</p>' +
@@ -307,6 +306,13 @@
         zoom: 10,
         center: [-98.4916, 29.4252]
     });
+
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
 
     // var zoomSelect = document.getElementById("zoom-select")
     // zoomSelect.addEventListener("change", function (event) {
@@ -351,6 +357,6 @@
 <!--    Mapbox information-->
 
 <!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>-->
-
+</div>
 </body>
 </html>
