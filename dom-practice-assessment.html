@@ -82,14 +82,47 @@ document.getElementById("add-to-list".appendChild(node);
 
 <!--Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.-->
 
+<!--function myFunction() {-->
+<!--    var node = document.createElement("li");-->
+<!--    var textnode = document.createTextNode("Water");-->
+<!--    node.appendChild(textnode);-->
+<!--    document.getElementById("myList").appendChild(node);-->
+<!--}-->
+
 <!--XXX When the heading 'Change Me' is double clicked, change its background-color to purple.-->
+
+$(document).ready(function(){
+console.log("hello");
+// $("#changeme").click(function(){
+//     console.log("click");
+// })
+$('#changeme').dblclick(function () {
+console.log("dblclick");
+$(this).css("background-color", "purple");
+});
+
+
 
 <!--Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.-->
 
+// Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.
+$("#change-cohort").click(function () {
+$("#my-cohort").html($("#cohort-name").val())
+});
+
 <!--My Cohort: Deimos-->
+
 <!--XXX When 'Highlight' button is clicked, change the background color of the cohort name to yellow.-->
 
+$('#highlight').click(function() {
+$('#cohort-name').css("background-color", "yellow");
+});
+
 XXX <!--Write some JavaScript that changes the background-color of the container to pink after 3 seconds.-->
+
+myVar = setTimeout(function(){
+document.body.style.backgroundColor = "pink"
+}, 3000);
 
 <!DOCTYPE html>
 <html lang="en">
