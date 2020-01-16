@@ -15,13 +15,26 @@
 
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <style>
+
+
+        .container{
+            background-image:url(images/alamo.jpeg);
+            opacity: .5;
+            background-size: cover;
+            /*height: 100%*/
+            /*margin: 20px;*/
+            background-color: orangered;
+        }
         .parent-card{
             display: flex;
             flex-direction: row;
+            /*background-image:url(images/alamo.jpeg);*/
             /*flex-grow: 1;*/
             /*justify-content: space-around;*/
             /*padding: 10px;*/
         }
+
+
 
         .todayWeather {
             background-color: lightgrey;
@@ -80,10 +93,16 @@
 
         #header-1 {
             grid-area: header-1;
+            opacity: 1;
+        }
+        .alamo{
+            width: 100%;
+            height: 500px;
         }
 
         #header-22 {
             grid-area: header-22;
+            opacity: 2;
         }
 
         #current-weather {
@@ -152,9 +171,20 @@
 
 <div id="main-container class" class="mainBackground">
 
-    <h1 id="header-1">Weather Application</h1>
+    <h1><p class="quote"<strong>“If you don't like the weather in the Lone Star State, Wait ten minutes.”
+        ---Sam Houston circa 1836</strong></h1></p></h1>
+    <img class="alamo" src="images/alamo.jpeg">
 
-    <h3 id="header-22">San Antonio</h3>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="header-1">Weather Application</h1>
+            <h3 id="header-22">San Antonio</h3>
+
+
+        </div>
+    </div>
+
+
 
 <!--    Card 1 start-->
 
@@ -332,7 +362,7 @@
         var longitude = long.value;
         var latitude = lat.value;
 
-        reverseGeocode({lng: longitude, lat: latitude}, mapboxToken).then(function (result) {
+        reverseGeocode({lng: longitude, lat: latitude}, mapBoxToken).then(function (result) {
             geocode(result, mapboxToken).then(function (result2) {
                 map.setCenter(result2);
                 map.setZoom(15);

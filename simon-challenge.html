@@ -1,132 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>RR Resume</title>
-    <meta name="viewport" content="="width="device-width,initial-scale=1">
-    <lin href="'https:fonts"
+    <meta http-equiv="Content-Type" content=" charset=utf-8">
 
-    <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <audio id="clip1">
-        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
-    </audio>
-    <audio id="clip2">
-        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
-    </audio>
-    <audio id="clip3">
-        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
-    </audio>
-    <audio id="clip4">
-        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
-    </audio>
+    <!-- Bootstrap CSS -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
+    <title>Hello, world!</title>
 
 
-    <link rel="stylesheet" type="text/css" href="css/simon-challenge.css">
+
+
+
+    <style>
+
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            text-align: center;
+            color: #000002;
+            background-color: white;
+        }
+
+        }
+
+        .Title {
+            grid-area: 1 / 3 / 2 / 6;
+        }
+        .count {
+            grid-area: 4 / 3 / 5 / 6;
+            border: black 10px;
+        }
+        .counter {
+            grid-area: 5 / 4 / 6 / 5;
+            border: black 10px;
+        }
+        .start-button{
+            grid-area: 6 / 3 / 7 / 4;
+            border: black 10px;
+        }
+        .strict {
+            grid-area: 6 / 5 / 7 / 6;
+            border: black 10px;
+        }
+        .off {
+            grid-area: 7 / 3 / 8 / 4;
+            border: black 10px;
+        }
+        .on {
+            grid-area: 7 / 5 / 8 / 6;
+            border: black 10px;
+        }
+        /*.footer1 {*/
+        /*    grid-area: 10 / 1 / 11 / 8;*/
+        /*    border: black 10px;*/
+        /*}*/
+        #button one {
+            grid-area: 2 / 2 / 4 / 4;
+            background-color: green;
+            border: black 10px;
+        }
+        .red-box{
+            grid-area: 2 / 5 / 4 / 7;
+            background-color: red;
+            border: black 10px;
+        }
+        .yellow-box {
+            grid-area: 8 / 2 / 10 / 4;
+            background-color: yellow;
+            border: black 10px;
+        }
+        .blue-box {
+            grid-area: 8 / 5 / 10 / 7;
+            background-color: aqua;
+            border: black 10px;
+        }
+
+
+
+
+        /*h1 {*/
+        /*    color: #000002;*/
+        /*    font-size: 20px;*/
+        /*    background-color: white;*/
+        /*}*/
+
+        /*#one {*/
+        /*    height: 100px;*/
+        /*    width:100px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+
+        /*}*/
+
+        /*#two {*/
+        /*    height: 100px;*/
+        /*    width: 100px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+
+        /*}*/
+
+        /*#three {*/
+        /*    height: 100px;*/
+        /*    width: 100px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+
+        /*}*/
+
+        /*#four {*/
+        /*    height: 100px;*/
+        /*    width: 100px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+
+        /*}*/
+
+        .dark1 {
+            background-color: #10b958;
+        }
+
+        .light1 {
+            background-color: #13FF75;
+        }
+
+        .dark2 {
+            background-color: #c61611;
+        }
+
+        .light2 {
+            background-color: #ff1c15;
+        }
+
+
+        .dark3 {
+            background-color: #dddf1a;
+        }
+
+        .light3 {
+            background-color: #fdff1d;
+        }
+
+        .dark4 {
+            background-color: #5ac5c6;
+        }
+
+        .light4 {
+            background-color: #73feff;
+        }
+
+        /*.bt {*/
+        /*    height: 30px;*/
+        /*    width: 40px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+        /*    background-color: transparent;*/
+        /*    justify-content: center;*/
+        /*}*/
+
+
+
+        /*.img {*/
+        /*    height: 12px;*/
+        /*    width: 12px;*/
+        /*    text-align: center;*/
+        /*    align-content: center;*/
+
+        /*}*/
+
+        #footer{
+            margin:auto;
+            text-align:center;
+        }
+
+
+    </style>
+
+    <!-- below are my stylesheets -->
+
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="styleSheet.css">
 
 </head>
 
-<!--///////////////////////////////////////////////////////////////-->
-
 <body>
 
-<div id="outer-circle">
-    <div id="topLeft"></div>
-        <div id="topRight"></div>
-            <div id="bottomLeft"></div>
-                <div id="bottomRight"></div>
-                    <div id="inner-circle"></div>
-                <div id=title" class='font-effect-emboss'>SIMON!</div>
-                        <div id="switches"></div>
-                <input type="checkbox" class="toggle" id="on">
-                <button class="button" id ="start">Start</button>
-                <input type="checkbox" class="toggle" id="strict"></div>
-                    <div class="text1">
-                        <span>POWER</span><span>STRICT</span>
-                    </div>
-            <div id="turn"></div>
-            <div class="text2">
-                COUNT
-            </div>
-        </div>
-    </div>
+
+<!-- HTML content-->
+
+
+<div class="parent">
+    <div class="Title"><h1>Simon</h1></div>
+    <div class="count"><h1>Count</h1></div>
+    <div class="counter"><h1>3</h1></div>
+    <div class="start-button"><button>Start</button></div>
+    <div class="strict"><button>Strict</button></div>
+    <div class="off"><button>OFF</button></div>
+    <div class="on"><button>ON</button></div>
+    <div class="green-box">green</div>
+    <div class="red-box">red</div>
+    <div class="yellow-box">yellow</div>
+    <div class="blue-box">blue</div>
 </div>
 
+<audio id="audio1">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio2">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio3">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio4">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg">
+</audio>
+<!--<div class="container-fluid" id="content">-->
 
-<!--///////////////////////////////////////////////////////////////////////////////-->
+<!--    <div id="parent" class="row text-center">-->
+<!--        <h1 class="text-primary text-center">Simon</h1>-->
 
+<!--        <h1 id="input" class="text-primary text-center"></h1>-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <script>
-            let order =[];
-            let playerOrder =[];
-            let flash;
-            let turn;
-            let good;
-            let compturn;
-            let intervalID;
-            let strict = false;
-            let noise = true;
-            let on = false;
-            let win;
-
-            const turnCounter = document.querySelector("#turn");
-            const topLeft = document.querySelector('#topLeft');
-            const topRight = document.querySelector("#topRight");
-            const bottomLeft = document.querySelector("#bottomLeft");
-            const bottomRight = document.querySelector("#bottomRight");
-            const strictButton = document.querySelector('#strict');
-            const onButton = document.querySelector("#on");
-            const startButton = document.querySelector("#start");
+<!--        <div id = "bt">-->
 
 
-            strictButton.addEventListener('click',(event)) => {
-                if (strictButton.checked === true) {
-                    strict = true;
-                } else {
-                    strict = false;
+<!--                <div class="row text-center">-->
+<!--                <button id="one" class="dark1"></button>-->
+<!--                <button id="two" class="dark2"></button>-->
+<!--                </div>-->
+
+
+
+
+
+<!--                <div class="row text-center">-->
+<!--                <button id="three" class="dark3"></button>-->
+<!--                <button id="four" class="dark4"></button>-->
+<!--                 </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+<hr class="hr">
+
+<p class="footer text-center" id="footer">Coded by <a href=# target="_blank">RRajski</a></p>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+
+    <script>
+
+    var random = [];
+    var litID = [];
+    var lit;
+    var clicked = [];
+    var i;
+    var j=0;
+    var count = 1;
+    var on;
+    var off;
+    var strict;
+    var x;
+
+
+    function change1() {
+
+        //set interval length
+        if (count <= 10) {
+            off = 400;
+            on = 800;
+
+        }
+
+        else {
+            off = 250;
+            on = 500;
+        }
+
+        x = setInterval(function () {
+
+            if (random[j] == 1) {
+
+                lit = 'light1';
+                $('#one').addClass(lit);
+                $('#audio1')[0].play();
+                litID.push(1);
+
+
+                setTimeout(function () {
+
+                    $('#one').removeClass(lit);
+
+                }, off);
+
+            }
+
+            else if (random[j] == 2) {
+
+                lit = 'light2';
+                $('#two').addClass(lit);
+                $('#audio2')[0].play();
+                litID.push(2);
+
+
+                setTimeout(function () {
+
+                    $('#two').removeClass(lit);
+
+                }, off);
+
+            }
+
+            else if (random[j] == 3) {
+
+                lit = 'light3';
+                $('#three').addClass(lit);
+                $('#audio3')[0].play();
+                litID.push(3);
+
+
+                setTimeout(function () {
+
+                    $('#three').removeClass(lit);
+
+                }, off);
+
+            }
+
+            else {
+
+                lit = 'light4';
+                $('.blue-box').addClass(lit);
+                $('#audio4')[0].play();
+                litID.push(4);
+
+
+                setTimeout(function () {
+
+                    $('#four').removeClass(lit);
+
+                }, off);
+            }
+
+            j++;
+
+            if (j>=count) {
+                clearInterval(x);
+            }
+
+        }, on);
+
+    }
+
+
+    function checking() {
+
+        if (litID.length == clicked.length) {
+
+            if (litID.join() == clicked.join()) {
+
+                if (count == 20) {
+
+                    setTimeout(function () {
+                        alert("You win!");
+                        location.reload();
+                    }, 1000);
                 }
-            })
 
-            onButton.addEventListener('click', event) => {
-                if (onButton.checked === true) {
-                    on = true
-                    turnCounter.innerHTML = "-";
-                } else {
-                    on =false;
-                    turnCounter.innerHTML = "";
-                    clearColor();
-                    clearInterval(IntervalId);
+                else {
+                    setTimeout(function () {
+                        $('#count').text(count + 1);
+                        count++;
+                        litID = [];
+                        clicked = [];
+                        j = 0;
+                        change1();
+
+                    }, 1000);
                 }
-            })
+            }
+
+            else {
+                if (strict == 1) {
+
+                    location.reload();
+
+                }
+
+                else {
+                    setTimeout(function () {
+                        $('#count').text('!!');
+
+                        litID = [];
+                        clicked = [];
+                        j = 0;
+                        change1();
+                    }, 1000);
+                }
+            }
+        }
+    }
 
 
+    //to switch on
+    $('#on').on('click', function () {
+        $('#count').text('--');
+
+        for (i=0; i<20; i++) {
+            random[i] = Math.ceil((Math.random() * 4));
+        }
+
+        $('#strict').on('click', function () {
+            strict=1;
+        });
+
+        //to start the game
+        $('#start').on('click', function () {
+
+            $('#count').text(count);
+
+            change1();
+
+        });
+
+        //user to play
+        $('#one').on('click', function () {
+
+            $('#one').addClass('light1');
+            $('#audio1')[0].play();
+
+            clicked.push(1);
+
+            setTimeout(function () {
+                $('#one').removeClass('light1');
+
+            }, 250);
+
+            checking();
+
+        });
+
+        $('#two').on('click', function () {
+
+            $('#two').addClass('light2');
+            $('#audio2')[0].play();
+
+            clicked.push(2);
+
+            setTimeout(function () {
+                $('#two').removeClass('light2');
+
+            }, 250);
+
+            checking();
+        });
+
+        $('#three').on('click', function () {
+
+            $('#three').addClass('light3');
+            $('#audio3')[0].play();
+
+            clicked.push(3);
+
+            setTimeout(function () {
+                $('#three').removeClass('light3');
+
+            }, 250);
+
+            checking();
+        });
+
+        $('#four').on('click', function () {
+
+            $('#four').addClass('light4');
+            $('#audio4')[0].play();
+
+            clicked.push(4);
+
+            setTimeout(function () {
+                $('#four').removeClass('light4');
+
+            }, 250);
+
+            checking();
+        });
+
+    });
+
+    //to switch off
+    $('#off').on('click', function () {
+        location.reload();
+    });
 
 
-
-
-        </script>
-
-
-
-
-
-        <script  src="JS/jquery-2.2.4.js"></script>
-
+</script>
 
 </body>
-</html>
+
+    </html>
