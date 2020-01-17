@@ -1,0 +1,57 @@
+/*css*/
+
+* {
+    margin: 1px color: black;
+    padding: 10px;
+
+#parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.heeder-11{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.hider{
+
+    grid-area: 2 / 1 / 3 / 2;
+}
+.shower {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.toggler {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.Faderoutter {
+    grid-area: 5 / 1 / 6 / 2;
+}
+.Faderinner {
+    grid-area: 6 / 1 / 7 / 2;
+}
+.Toggler {
+    grid-area: 7 / 1 / 8 / 2;
+}
+.sliderdown {
+    grid-area: 8 / 1 / 9 / 2;
+}
+.sliderdown{
+    grid-area: 9 / 1 / 10 / 2;
+}
+.togglerslide {
+    grid-area: 10 / 1 / 11 / 2;
+}
+.header-22 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.image-1 {
+    grid-area: 2 / 2 / 5 / 3;
+}
+.image-2 {
+    grid-area: 5 / 2 / 8 / 3;
+}
+.image-3 {
+    grid-area: 8 / 2 / 11 / 3;
+};

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Review</title>
+
+</head>
+<body>
+<div class="container">
+    <div id="main">
+        <input type="text" id="input">
+        <button id="add-to-list">Add to List</button>
+
+        <p id="demo">Hello World</p>
+
+        <h4>Favorite Food:</h4>
+        <ul id="favorite-food">
+            <li>Ramen</li>
+            <li>Sushi</li>
+            <li>Curry</li>
+        </ul>
+
+        <h4 id="changeme">Change Me</h4>
+
+        <h4>My Cohort: <span id="my-cohort"></span></h4>
+        <input type="text" id="cohort-name">
+        <button id="change-cohort">Update</button>
+
+        <br>
+        <button id="highlight">Highlight</button>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+"use strict";
+$(document).ready(function(){
+    console.log("hello");
+    // $("#changeme").click(function(){
+    //     console.log("click");
+    // })
+    $('#changeme').dblclick(function () {
+        console.log("dblclick");
+        $(this).css("background-color", "purple");
+    });
+    $('#highlight').click(function() {
+        $('#cohort-name').css("background-color", "yellow");
+    });
+    $('#container').delay(3000).queue(function () {
+        console.log(queue);
+       $(this).css("background-color","pink");
+    });
+
+myVar = setTimeout(function(){
+document.body.style.backgroundColor = "pink"
+}, 3000);
+
+function myFunction(){
+    var node = document.createElement('li');
+}
+var textnode = document.createTextNode("Water");
+node.appendChild(textnode);
+document.getElementById("add-to-list".appendChild(node);
+
+
+
+
+
+
+
+
+});
+
+
+
+</script>
+
+
+</body>
+</html>
+
+<!--Open up dom-review.html and follow the instructions:-->
+
+<!--Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.-->
+
+<!--function myFunction() {-->
+<!--    var node = document.createElement("li");-->
+<!--    var textnode = document.createTextNode("Water");-->
+<!--    node.appendChild(textnode);-->
+<!--    document.getElementById("myList").appendChild(node);-->
+<!--}-->
+
+<!--XXX When the heading 'Change Me' is double clicked, change its background-color to purple.-->
+
+$(document).ready(function(){
+console.log("hello");
+// $("#changeme").click(function(){
+//     console.log("click");
+// })
+$('#changeme').dblclick(function () {
+console.log("dblclick");
+$(this).css("background-color", "purple");
+});
+
+
+
+<!--Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.-->
+
+// Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.
+$("#change-cohort").click(function () {
+$("#my-cohort").html($("#cohort-name").val())
+});
+
+<!--My Cohort: Deimos-->
+
+<!--XXX When 'Highlight' button is clicked, change the background color of the cohort name to yellow.-->
+
+$('#highlight').click(function() {
+$('#cohort-name').css("background-color", "yellow");
+});
+
+XXX <!--Write some JavaScript that changes the background-color of the container to pink after 3 seconds.-->
+
+myVar = setTimeout(function(){
+document.body.style.backgroundColor = "pink"
+}, 3000);
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="page">
+    <h1 class="foo">Codeup Rocks!</h1>
+    <h2 onclick = "this.innerHTML = 'OOpps'">Click on this text!</h2>
+    <h2 id ="sub-header" class="something">Buy groceries</h2>
+    <ul id = "myList">
+        <h4>Favorite Food:</h4>
+        <li id="one"><em>fresh</em>figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="five">Ramen</li>
+        <li id="six">Sushi</li>
+        <li id="seven">Curry</li>
+    </ul>
+    <button>Switch colors?</button>
+    <button type="button" onclick="chBackcolor('red');">Let's see if this works!</button>
+    <button id="btn" type="button">Try it</button>
+    <button onclick="myFunction()">Add to list</button>
+    <input onclick="change()" type="button" value="Open Curtain" id="myButton1">
+
+
+
+<!---->
+
+</div>
+<script>
+
+
+
+<!--myVar = setTimeout(function(){-->
+<!--    document.body.style.backgroundColor = "pink"-->
+<!--}, 3000);-->
+
+<!--// function myFunction(){-->
+<!--//     var node = document.createElement('li');-->
+<!--//     var textnode = document.createTextNode("Water");-->
+<!--//     node.appendChild(textnode);-->
+<!--//     document.getElementById("myList".appendChild(node);-->
+<!--// }-->
+<!--function myFunction() {-->
+<!--    var node = document.createElement("li");-->
+<!--    var textnode = document.createTextNode("Water");-->
+<!--    node.appendChild(textnode);-->
+<!--    document.getElementById("myList").appendChild(node);-->
+<!--}-->
+<!--var button = document.querySelector("button");-->
+<!--var isColored = false;-->
+<!--button.addEventListener("click", function() {-->
+
+<!--})-->
+<!--    if (isColored) {-->
+<!--        document.body.style.background = "white";-->
+<!--        isColored = false;-->
+<!--    } else {-->
+<!--        document.body.style.background = "blue";-->
+<!--        isColored = true;-->
+<!--    }-->
+<!--function change() {-->
+<!--    document.getElementById("myButton1").value = "Close Curtain";-->
+<!--}-->
+<!--document.getElementById('btn').onclick = function() {-->
+<!--    document.getElementById('three').innerHTML = 'Hey There';-->
+<!--}-->
+
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
