@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>for each</h1>
+
+
+
+
+
+<script>
+
+
+    "use strict"
+
+    let colors =[ 'red','blue','green'];
+
+    for (var i=0; i <colors.length; i++) {
+        console.log(colors);
+    }
+    colors.forEach(function (color) {
+        console.log(color);
+
+    });
+
+
+
+    // 1. create an array of numbers.
+    let numbers =[1,2,3,4,5];
+
+    // create a variable to hold the sum
+    let sum = 0;
+
+    function adder(number){
+        sum +=number;
+    }
+
+    // loop over the array, incrementing the sum variable
+    numbers.forEach(adder);
+
+    // print the sum variable
+
+    sum;
+
+// code below is calling savePost 3x's using a loop --- Refactored to use for each
+    function handlePosts() {
+        var posts = [
+            { id: 23, title: 'Daily JS News' },
+            { id: 52, title: 'Code Refactor City' },
+            { id: 105, title: 'The Brightest Ruby' }
+        ];
+
+        // for (var i = 0; i < posts.length; i++) {
+        //   savePost(posts[i]);
+        let i = 3;
+        posts.forEach(function(post){
+            savePost([i]);
+
+        });
+    }
+
+
+    const fibonacci = function(n) {
+        if (n < 3) return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+
+    const fibonacci =  (n) => {
+        if (n < 3) return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    };
+
+    let users = [
+        { name: 'Jill'},
+        { name: 'Alex'},
+        { name: 'bill'}
+    ];
+    // for loop
+    for(let i=0; i < users.length; i++) {
+        if (user[i]).name === 'Alex') {
+        user = users [i];
+        break;
+    }
+    }
+user;
+    // find will only return first instance
+    users.find(function(user){
+        return user.name === 'Alex;'
+    });
+
+    // collection of car objects find  car with a feature
+
+    function Car(model) {
+        this.model = model;
+
+        let  cars =[
+            new Car ('Buick'),
+            new Car ('Camaro'),
+            new Car ('Focus')
+        ];
+
+        cars.find(function (car) {
+            return car.model === 'Focus';
+
+        });
+
+    }
+
+    var posts =[
+        {id: 1, title: 'New Post'},
+        {id: 2, title: 'Old Post'}
+    ];
+    var comment = {postId: 1, content: 'Great Post'};
+
+    function postForComment(posts, comment){
+        return posts.find(function (post) {
+            return post.id === comment.postId;
+        });
+    }
+    postForComment(posts,comment);
+
+    // when would we use the find helper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+</body>
+</html>
